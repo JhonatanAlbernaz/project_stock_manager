@@ -10,7 +10,7 @@
         public function __construct(string $name ,string $email, string $password, int $userType, string $numberRecord){
             $this->name = $name;
             $this->email = $email;
-            $this->password = password_hash($password, PASSWORD_BCRYPT);
+            $this->password = $password;
             $this->userType = $userType;
             $this->numberRecord = $numberRecord;
         }

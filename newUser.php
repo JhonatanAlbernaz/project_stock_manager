@@ -539,50 +539,46 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <div class="row">
-             <form action="controllers/saveUser.php" method="POST" class="row g-2" enctype="multipart/form-data">
+            <form action="controllers/saveUser.php" method="post" role="form" class="php-email-form">
+              <div class="row">
 
-              <div class="section-title">
+               <div class="section-title">
                 <h2>CADASTRAR</h2>
                </div>
 
-              <div class="form-group">
-               <label for="name" class="form-label">Nome Completo</label>
-               <input type="text" class="form-control form-control-md text-dark" id="name" name="name" required>
-              </div>
- 
-              <div class="col-md-6 form-group input-group-sm font-size-register">
-               <label for="email" class="form-label">E-mail</label>
-               <input type="email" class="form-control form-control-md text-dark" id="email" name="email" required>
-              </div>
- 
-              <div class="col-md-4 form-group col-6 input-group-sm font-size-register">
-               <label for="password" class="form-label">Senha</label>
-               <input type="password" class="form-control form-control-md text-dark password" id="password" name="password" required>
-              </div>
- 
-              <div class="col-md-4 form-group col-6 input-group-sm font-size-register">
-               <label for="userType" class="form-label">Tipo</label><br>
-               <select class="select" widht="10px" name="userType">
-                <option value=""></option>
-                <option value="1">Gestor</option>
-                <option value="2">Fornecedor</option>
-               </select>
-              </div>
- 
-              <div class="col-md-6 form-group input-group-sm font-size-register">
-               <label for="numberRecord" class="form-label">CPF/CNPJ</label>
-               <input type="text" class="form-control form-control-md text-dark" id="numberRecord" name="numberRecord" required>
-              </div>
- 
-              <div class="col-12 input-group-sm mt-4 d-flex justify-content-end">
-               <input type="submit" class="btn btn-danger btn-block mb-3 font-size-register" value="CADASTRAR" style="border-radius: 15px;">
-              </div>
- 
-             </form> 
-            </div>
+               <div class="form-group">
+                <label for="name">Seu Nome</label>
+                <input type="text" class="form-control" name="name" id="name" required>
+               </div>
+
+               <div class="form-group col-md-6">
+                <label for="name">Seu Email</label>
+                <input type="email" name="email" class="form-control" id="email" required>
+               </div>
+
+               <div class="form-group col-md-6">
+                <label for="name">Sua senha</label>
+                <input type="password" class="form-control" name="password" id="password" required>
+               </div>
+
+               <div class="form-group col-md-6">
+                <label for="name">Tipo</label><br>
+                <select class="select form-control" name="userType">
+                 <option value=""></option>
+                 <option value="1">Gestor</option>
+                 <option value="2">Fornecedor</option>
+                </select>
+               </div>
+
+               <div class="form-group col-md-6">
+                <label for="name">CPF/CNPJ</label>
+                <input type="text" class="form-control" name="numberRecord" id="numberRecord" required>
+               </div>
+
+               <div class="text-center mt-4"><input class="btn btn-primary" type="submit" value="Cadastrar"></input></div>
+
+            </form>
           </div>
-         </div>
 
         </div>
 
