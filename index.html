@@ -539,7 +539,7 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="controllers/saveUser.php" method="POST" role="form" class="php-email-form">
               <div class="row">
 
                <div class="section-title">
@@ -575,7 +575,7 @@
                 <input type="text" class="form-control" name="numberRecord" id="numberRecord" required>
                </div>
 
-               <div class="text-center mt-4"><button type="submit">Cadastrar</button></div>
+               <div class="text-center mt-4"><input type="submit" value="Cadastrar">Cadastrar</input></div>
 
             </form>
           </div>
@@ -595,7 +595,7 @@
         <div class="row justify-content-center">
           <div class="col-lg-6">
             <h4>Junte-se à nós</h4>
-            <form action="" method="post">
+            <form action="/controllers/checkLogin.php" method="post">
               <input class="form-control" type="email" name="email" placeholder="Seu Email">
               <input class="form-control" type="password" name="password" placeholder="Sua Senha">
               <input type="submit" value="Logar">
