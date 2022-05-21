@@ -1269,6 +1269,29 @@ section {
   background: #47b2e4;
   color: #fff;
 }
+
+.form-widht-100 {
+    width: 100%;
+    border-top: 3px solid #47b2e4;
+    border-bottom: 3px solid #47b2e4;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 0 24px 0 rgb(0 0 0 / 12%);
+    margin-top: 0px;
+}
+
+.padding-form {
+  padding: 0.375rem 0.75rem !important;
+}
+
+.select-css {
+  border: 1px solid #ced4da;
+    background-color: transparent;
+    border-radius: 0.2rem;
+    width: 100%;
+    padding: 0.35rem 0.8rem;
+}
+
 .contact .php-email-form {
   width: 100%;
   border-top: 3px solid #47b2e4;
