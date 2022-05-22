@@ -28,6 +28,19 @@
 
             $stm->execute();
         }
+
+        public function findbyemail($emailcheck) {
+
+            $resultado = Banco::getInstance()->query("
+                SELECT email, password, userType FROM user 
+                WHERE email = \"$emailcheck\"", PDO::FETCH_OBJ
+            );
+
+            $resultado->execute();
+            
+            return $resultado->fetch();
+        }
+
     }
 
 ?>
