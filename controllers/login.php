@@ -18,7 +18,7 @@
         $_SESSION["userType"] = $user->userType;
         $_SESSION["name"] = $obj->name;
 
-        header("Location: ../index.html");
+        header("Location: ../Dashboard/index.html");
 
     }else {
 
