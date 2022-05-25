@@ -41,7 +41,7 @@
                   <i class="icon-search"></i>
                 </span>
               </div>
-              <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
+              <input type="text" class="form-control" id="navbar-search-input" placeholder="Procure agora" aria-label="search" aria-describedby="search">
             </div>
           </li>
         </ul>
@@ -404,7 +404,7 @@
             <div class="col-md-12 grid-margin">
               <div class="row">
                 <div class="col-12 col-xl-8 mb-4 mb-xl-0">
-                  <h3 class="font-weight-bold">Bem-vindo A Gestão De Estoque</h3>
+                  <h3 class="font-weight-bold">Bem-vindo A Gestão De Estoque </h3>
                   <h6 class="font-weight-normal mb-0">Todos os sistemas estão funcionando perfeitamente! <span class="text-primary">3 alertas não lidos!</span></h6>
                 </div>
                 <div class="col-12 col-xl-4">
@@ -450,7 +450,7 @@
                   <div class="card card-tale">
                     <div class="card-body">
                       <p class="mb-4">Today’s Bookings</p>
-                      <p class="fs-30 mb-2">4006</p>
+                      <span class="fs-30 mb-2" id="output">4006</span>
                       <p>10.00% (30 days)</p>
                     </div>
                   </div>
@@ -1065,8 +1065,11 @@
   </div>
   <!-- container-scroller -->
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <!-- plugins:js -->
   <script src="vendors/js/vendor.bundle.base.js"></script>
+
+  <script src="../assets/js/teste.js"></script>
   <!-- endinject -->
   <!-- Plugin js for this page -->
   <script src="vendors/chart.js/Chart.min.js"></script>
