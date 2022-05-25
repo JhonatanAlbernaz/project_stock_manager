@@ -20,6 +20,10 @@
   <link rel="stylesheet" href="css/vertical-layout-light/style.css">
   <!-- endinject -->
   <link href="images/favicon.ico" rel="icon">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+
 </head>
 <body>
   <div class="container-scroller">
@@ -411,8 +415,8 @@
                  <div class="justify-content-end d-flex">
                   <div class="dropdown flex-md-grow-1 flex-xl-grow-0">
                     <button class="btn btn-sm btn-light bg-white dropdown-toggle" type="button" id="dropdownMenuDate2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                     <i class="mdi mdi-calendar"></i> Hoje (24 de maio de 2022)
-                    </button>
+                     <i class="mdi mdi-calendar"></i> Hoje (<?php echo date("d") . " do " . date("m") . " de " . date("Y")?>)
+                    </button> 
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuDate2">
                       <a class="dropdown-item" href="#">Maio - Junho</a>
                       <a class="dropdown-item" href="#">Junho - Julho</a>
@@ -450,7 +454,7 @@
                   <div class="card card-tale">
                     <div class="card-body">
                       <p class="mb-4">Today’s Bookings</p>
-                      <span class="fs-30 mb-2" id="output">4006</span>
+                      <span class="fs-30 mb-2 num">4006</span>
                       <p>10.00% (30 days)</p>
                     </div>
                   </div>
@@ -459,7 +463,7 @@
                   <div class="card card-dark-blue">
                     <div class="card-body">
                       <p class="mb-4">Total Bookings</p>
-                      <p class="fs-30 mb-2">61344</p>
+                      <div class="fs-30 mb-2 num">61344</div>
                       <p>22.00% (30 days)</p>
                     </div>
                   </div>
@@ -470,7 +474,7 @@
                   <div class="card card-light-blue">
                     <div class="card-body">
                       <p class="mb-4">Number of Meetings</p>
-                      <p class="fs-30 mb-2">34040</p>
+                      <p class="fs-30 mb-2 num">34040</p>
                       <p>2.00% (30 days)</p>
                     </div>
                   </div>
@@ -479,7 +483,7 @@
                   <div class="card card-light-danger">
                     <div class="card-body">
                       <p class="mb-4">Number of Clients</p>
-                      <p class="fs-30 mb-2">47033</p>
+                      <p class="fs-30 mb-2 num">47033</p>
                       <p>0.22% (30 days)</p>
                     </div>
                   </div>
@@ -1063,6 +1067,10 @@
     </div>   
     <!-- page-body-wrapper ends -->
   </div>
+
+  <script type="text/javascript">
+    $(".num").counterUp({delay:10,time:3500});
+  </script>
   <!-- container-scroller -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
