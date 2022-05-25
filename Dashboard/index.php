@@ -41,7 +41,7 @@
                   <i class="icon-search"></i>
                 </span>
               </div>
-              <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
+              <input type="text" class="form-control" id="navbar-search-input" placeholder="Procure agora" aria-label="search" aria-describedby="search">
             </div>
           </li>
         </ul>

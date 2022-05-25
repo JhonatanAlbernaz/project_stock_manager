@@ -16,9 +16,9 @@
         $_SESSION['id'] = $user->id;
         $_SESSION["email"] = $emailcheck;
         $_SESSION["userType"] = $user->userType;
-        $_SESSION["name"] = $obj->name;
+        $_SESSION["name"] = $user->name;
 
-        header("Location: ../Dashboard/index.html");
+        header("Location: ../Dashboard/index.php");
 
     }else {
 
