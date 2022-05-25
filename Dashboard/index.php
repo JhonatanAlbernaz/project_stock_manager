@@ -450,7 +450,7 @@
                   <div class="card card-tale">
                     <div class="card-body">
                       <p class="mb-4">Today’s Bookings</p>
-                      <p class="fs-30 mb-2">4006</p>
+                      <span class="fs-30 mb-2" id="output">4006</span>
                       <p>10.00% (30 days)</p>
                     </div>
                   </div>
@@ -1065,8 +1065,11 @@
   </div>
   <!-- container-scroller -->
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <!-- plugins:js -->
   <script src="vendors/js/vendor.bundle.base.js"></script>
+
+  <script src="../assets/js/teste.js"></script>
   <!-- endinject -->
   <!-- Plugin js for this page -->
   <script src="vendors/chart.js/Chart.min.js"></script>
