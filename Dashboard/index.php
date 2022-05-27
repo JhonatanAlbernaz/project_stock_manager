@@ -437,7 +437,7 @@
                   <div class="weather-info">
                     <div class="d-flex">
                       <div>
-                        <h2 class="mb-0 font-weight-normal"><i class="icon-sun mr-2"></i>31<sup>C</sup></h2>
+                        <h2 class="mb-0 font-weight-normal"><i class="icon-sun mr-2"></i>31<sup>°C</sup></h2>
                       </div>
                       <div class="ml-2">
                         <h4 class="location font-weight-normal">Bangalore</h4>
@@ -453,18 +453,18 @@
                 <div class="col-md-6 mb-4 stretch-card transparent">
                   <div class="card card-tale">
                     <div class="card-body">
-                      <p class="mb-4">Today’s Bookings</p>
-                      <span class="fs-30 mb-2 num">4006</span>
-                      <p>10.00% (30 days)</p>
+                      <p class="mb-4">Total de Produtos</p>
+                      <span class="fs-30 mb-2 num">4.006</span>
+                      <p>10.00% (30 dias)</p>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-6 mb-4 stretch-card transparent">
                   <div class="card card-dark-blue">
                     <div class="card-body">
-                      <p class="mb-4">Total Bookings</p>
-                      <div class="fs-30 mb-2 num">61344</div>
-                      <p>22.00% (30 days)</p>
+                      <p class="mb-4">Número de Gestores</p>
+                      <div class="fs-30 mb-2 num">644</div>
+                      <p>22.00% (30 dias)</p>
                     </div>
                   </div>
                 </div>
@@ -473,18 +473,18 @@
                 <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
                   <div class="card card-light-blue">
                     <div class="card-body">
-                      <p class="mb-4">Number of Meetings</p>
-                      <p class="fs-30 mb-2 num">34040</p>
-                      <p>2.00% (30 days)</p>
+                      <p class="mb-4">Total de Fornecedores</p>
+                      <p class="fs-30 mb-2 num">413</p>
+                      <p>2.00% (30 dias)</p>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-6 stretch-card transparent">
                   <div class="card card-light-danger">
                     <div class="card-body">
-                      <p class="mb-4">Number of Clients</p>
-                      <p class="fs-30 mb-2 num">47033</p>
-                      <p>0.22% (30 days)</p>
+                      <p class="mb-4">Número de Clientes</p>
+                      <p class="fs-30 mb-2 num">47.033</p>
+                      <p>0.22% (30 dias)</p>
                     </div>
                   </div>
                 </div>
@@ -495,24 +495,24 @@
             <div class="col-md-6 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <p class="card-title">Order Details</p>
-                  <p class="font-weight-500">The total number of sessions within the date range. It is the period time a user is actively engaged with your website, page or app, etc</p>
+                  <p class="card-title">Detalhes Do Pedido</p>
+                  <p class="font-weight-500">O número total de sessões dentro do intervalo de datas. É o período em que o fornecedor estar fornecendo a quantidade necessaria para repor o estoque.</p>
                   <div class="d-flex flex-wrap mb-5">
                     <div class="mr-5 mt-3">
-                      <p class="text-muted">Order value</p>
+                      <p class="text-muted">Valor do Pedido</p>
                       <h3 class="text-primary fs-30 font-weight-medium">12.3k</h3>
                     </div>
                     <div class="mr-5 mt-3">
-                      <p class="text-muted">Orders</p>
+                      <p class="text-muted">Pedidos</p>
                       <h3 class="text-primary fs-30 font-weight-medium">14k</h3>
                     </div>
                     <div class="mr-5 mt-3">
-                      <p class="text-muted">Users</p>
+                      <p class="text-muted">Comercial</p>
                       <h3 class="text-primary fs-30 font-weight-medium">71.56%</h3>
                     </div>
                     <div class="mt-3">
-                      <p class="text-muted">Downloads</p>
-                      <h3 class="text-primary fs-30 font-weight-medium">34040</h3>
+                      <p class="text-muted">Transferências</p>
+                      <h3 class="text-primary fs-30 font-weight-medium">34.040</h3>
                     </div> 
                   </div>
                   <canvas id="order-chart"></canvas>
@@ -523,10 +523,10 @@
               <div class="card">
                 <div class="card-body">
                  <div class="d-flex justify-content-between">
-                  <p class="card-title">Sales Report</p>
-                  <a href="#" class="text-info">View all</a>
+                  <p class="card-title">Relatório De Vendas</p>
+                  <a href="#" class="text-info">Ver Tudo</a>
                  </div>
-                  <p class="font-weight-500">The total number of sessions within the date range. It is the period time a user is actively engaged with your website, page or app, etc</p>
+                  <p class="font-weight-500">O número total de sessões dentro do intervalo de datas. É o período em que o fornecedor estar fornecendo a quantidade necessaria para repor o estoque.</p>
                   <div id="sales-legend" class="chartjs-legend mt-4 mb-2"></div>
                   <canvas id="sales-chart"></canvas>
                 </div>
@@ -543,10 +543,10 @@
                         <div class="row">
                           <div class="col-md-12 col-xl-3 d-flex flex-column justify-content-start">
                             <div class="ml-xl-4 mt-3">
-                            <p class="card-title">Detailed Reports</p>
-                              <h1 class="text-primary">$34040</h1>
-                              <h3 class="font-weight-500 mb-xl-4 text-primary">North America</h3>
-                              <p class="mb-2 mb-xl-0">The total number of sessions within the date range. It is the period time a user is actively engaged with your website, page or app, etc</p>
+                            <p class="card-title">Relatórios Detalhados</p>
+                              <h1 class="text-primary">$34.040</h1>
+                              <h3 class="font-weight-500 mb-xl-4 text-primary">América do Norte</h3>
+                              <p class="mb-2 mb-xl-0">O número total de sessões dentro do intervalo de datas. É o período em que um usuário está ativamente engajado com seu site, página ou aplicativo, etc.</p>
                             </div>  
                             </div>
                           <div class="col-md-12 col-xl-9">
@@ -555,7 +555,7 @@
                                 <div class="table-responsive mb-3 mb-md-0 mt-3">
                                   <table class="table table-borderless report-table">
                                     <tr>
-                                      <td class="text-muted">Illinois</td>
+                                      <td class="text-muted">São Paulo</td>
                                       <td class="w-100 px-0">
                                         <div class="progress progress-md mx-4">
                                           <div class="progress-bar bg-primary" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
@@ -564,16 +564,16 @@
                                       <td><h5 class="font-weight-bold mb-0">713</h5></td>
                                     </tr>
                                     <tr>
-                                      <td class="text-muted">Washington</td>
+                                      <td class="text-muted">New York</td>
                                       <td class="w-100 px-0">
                                         <div class="progress progress-md mx-4">
-                                          <div class="progress-bar bg-warning" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                          <div class="progress-bar bg-warning" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
                                       </td>
-                                      <td><h5 class="font-weight-bold mb-0">583</h5></td>
+                                      <td><h5 class="font-weight-bold mb-0">645</h5></td>
                                     </tr>
                                     <tr>
-                                      <td class="text-muted">Mississippi</td>
+                                      <td class="text-muted">Rio De Janeiro</td>
                                       <td class="w-100 px-0">
                                         <div class="progress progress-md mx-4">
                                           <div class="progress-bar bg-danger" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
@@ -585,13 +585,13 @@
                                       <td class="text-muted">California</td>
                                       <td class="w-100 px-0">
                                         <div class="progress progress-md mx-4">
-                                          <div class="progress-bar bg-info" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                          <div class="progress-bar bg-info" role="progressbar" style="width: 65%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
                                       </td>
                                       <td><h5 class="font-weight-bold mb-0">664</h5></td>
                                     </tr>
                                     <tr>
-                                      <td class="text-muted">Maryland</td>
+                                      <td class="text-muted">Minas Gerais</td>
                                       <td class="w-100 px-0">
                                         <div class="progress progress-md mx-4">
                                           <div class="progress-bar bg-primary" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
@@ -600,7 +600,7 @@
                                       <td><h5 class="font-weight-bold mb-0">560</h5></td>
                                     </tr>
                                     <tr>
-                                      <td class="text-muted">Alaska</td>
+                                      <td class="text-muted">Canadá</td>
                                       <td class="w-100 px-0">
                                         <div class="progress progress-md mx-4">
                                           <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
@@ -623,10 +623,10 @@
                         <div class="row">
                           <div class="col-md-12 col-xl-3 d-flex flex-column justify-content-start">
                             <div class="ml-xl-4 mt-3">
-                            <p class="card-title">Detailed Reports</p>
-                              <h1 class="text-primary">$34040</h1>
-                              <h3 class="font-weight-500 mb-xl-4 text-primary">North America</h3>
-                              <p class="mb-2 mb-xl-0">The total number of sessions within the date range. It is the period time a user is actively engaged with your website, page or app, etc</p>
+                            <p class="card-title">Relatórios Detalhados</p>
+                              <h1 class="text-primary">$34.040</h1>
+                              <h3 class="font-weight-500 mb-xl-4 text-primary">América do Norte</h3>
+                              <p class="mb-2 mb-xl-0">O número total de sessões dentro do intervalo de datas. É o período em que um usuário está ativamente engajado com seu site, página ou aplicativo, etc.</p>
                             </div>  
                             </div>
                           <div class="col-md-12 col-xl-9">
@@ -635,7 +635,7 @@
                                 <div class="table-responsive mb-3 mb-md-0 mt-3">
                                   <table class="table table-borderless report-table">
                                     <tr>
-                                      <td class="text-muted">Illinois</td>
+                                      <td class="text-muted">São Paulo</td>
                                       <td class="w-100 px-0">
                                         <div class="progress progress-md mx-4">
                                           <div class="progress-bar bg-primary" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
@@ -644,16 +644,16 @@
                                       <td><h5 class="font-weight-bold mb-0">713</h5></td>
                                     </tr>
                                     <tr>
-                                      <td class="text-muted">Washington</td>
+                                      <td class="text-muted">New York</td>
                                       <td class="w-100 px-0">
                                         <div class="progress progress-md mx-4">
-                                          <div class="progress-bar bg-warning" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                          <div class="progress-bar bg-warning" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
                                       </td>
-                                      <td><h5 class="font-weight-bold mb-0">583</h5></td>
+                                      <td><h5 class="font-weight-bold mb-0">645</h5></td>
                                     </tr>
                                     <tr>
-                                      <td class="text-muted">Mississippi</td>
+                                      <td class="text-muted">Rio de Janeiro</td>
                                       <td class="w-100 px-0">
                                         <div class="progress progress-md mx-4">
                                           <div class="progress-bar bg-danger" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
@@ -671,7 +671,7 @@
                                       <td><h5 class="font-weight-bold mb-0">664</h5></td>
                                     </tr>
                                     <tr>
-                                      <td class="text-muted">Maryland</td>
+                                      <td class="text-muted">Minas Gerais</td>
                                       <td class="w-100 px-0">
                                         <div class="progress progress-md mx-4">
                                           <div class="progress-bar bg-primary" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
@@ -680,7 +680,7 @@
                                       <td><h5 class="font-weight-bold mb-0">560</h5></td>
                                     </tr>
                                     <tr>
-                                      <td class="text-muted">Alaska</td>
+                                      <td class="text-muted">Canadá</td>
                                       <td class="w-100 px-0">
                                         <div class="progress progress-md mx-4">
                                           <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
@@ -702,11 +702,11 @@
                     </div>
                     <a class="carousel-control-prev" href="#detailedReports" role="button" data-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Previous</span>
+                      <span class="sr-only">Anterior</span>
                     </a>
                     <a class="carousel-control-next" href="#detailedReports" role="button" data-slide="next">
                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Next</span>
+                      <span class="sr-only">Próximo</span>
                     </a>
                   </div>
                 </div>
