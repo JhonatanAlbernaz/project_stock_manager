@@ -30,7 +30,7 @@ function countTo2(){
     let froms = 0;
     let tos = 61344;
     let steps = tos > froms ? 1 : -1;
-    let intervals = 1;
+    let intervals = 1000;
 
     if(froms == tos){
         document.querySelector("#output2").textContents = froms;
