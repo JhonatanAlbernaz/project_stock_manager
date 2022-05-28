@@ -89,6 +89,15 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50px;
   transition: all 0.4s;
 }
+
+.pessoaLogada {
+  font-weight: 400;
+  font-size: 20px;
+  color: #37517e;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
 .back-to-top i {
   font-size: 24px;
   color: #fff;

@@ -23,7 +23,7 @@
     }else {
 
         $_SESSION["erro_login"] = "Login invalido, senha ou email invalidos";
-        header("Location: ../index.html");
+        header("Location: ../index.php");
 
     }
     

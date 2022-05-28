@@ -24,11 +24,24 @@
   <!-- End plugin css for this page -->
   <!-- inject:css -->
   <link rel="stylesheet" href="css/vertical-layout-light/style.css">
+  <link rel="stylesheet" href="../assets/css/app.css">
   <!-- endinject -->
   <link href="images/favicon.ico" rel="icon">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+
+  <style>
+    
+    .pessoaLogada {
+      font-weight: 400;
+      font-size: 20px;
+      color: #37517e;
+      margin-top: 20px;
+      margin-right: 10px;
+    }
+
+  </style>
 
 </head>
 <body>
@@ -56,7 +69,9 @@
           </li>
         </ul>
         <ul class="navbar-nav navbar-nav-right">
-        <li><?php echo $_SESSION["name"]; ?></li>  
+          <li>
+           <p class="pessoaLogada"><?php echo $_SESSION["name"]; ?></p>  
+          </li>  
           <li class="nav-item dropdown">
             <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
               <i class="icon-bell mx-0"></i>
@@ -307,7 +322,7 @@
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="index.php">
               <i class="icon-grid menu-icon"></i>
               <span class="menu-title">Painel</span>
             </a>
@@ -320,9 +335,9 @@
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Novo Produto</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Lista de Produtos</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Lista de Fornecedores</a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/newProduct.php">Novo Produto</a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/listProduct.php">Lista de Produtos</a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/listProvider.php">Lista de Fornecedores</a></li>
               </ul>
             </div>
           </li>
