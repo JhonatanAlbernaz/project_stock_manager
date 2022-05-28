@@ -29,12 +29,12 @@
             $stm->execute();
         }
 
-        public function findbyemail($emailcheck) {
+        public function findbyemail($email) {
 
             $user = Banco::getInstance()->query("
                 SELECT id, name, email, password, userType 
                 FROM user 
-                WHERE email = \"$emailcheck\"", PDO::FETCH_OBJ
+                WHERE email = \"$email\"", PDO::FETCH_OBJ
             );
 
             $user->execute();
