@@ -1,3 +1,9 @@
+<?php
+
+  session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,6 +56,7 @@
           </li>
         </ul>
         <ul class="navbar-nav navbar-nav-right">
+        <li><?php echo $_SESSION["name"]; ?></li>  
           <li class="nav-item dropdown">
             <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
               <i class="icon-bell mx-0"></i>
