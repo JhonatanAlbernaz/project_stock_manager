@@ -461,7 +461,7 @@
                  <img src="<?php echo $product->image; ?>" style="width: 100%;"> 
                 </div>
                 <div class="col-7">
-                 <h2 class="pt-3"><b class="text-secondary"> <?php echo $product->name; ?> </b></h2>
+                 <h2 class="pt-3"><b class="text-primary"> <?php echo $product->name; ?> </b></h2>
                 </div>
                </div>
                <div class="row mt-5">
