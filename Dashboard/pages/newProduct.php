@@ -41,6 +41,20 @@
       margin-right: 10px;
     }
 
+    .form-widht-100px {
+      width: 100%;
+      border-top: 3px solid #47b2e4;
+      border-bottom: 3px solid #47b2e4;
+      padding: 30px;
+      background: #fff;
+      box-shadow: 0 0 24px 0 rgb(0 0 0 / 12%);
+      margin-top: 0px;
+    }
+
+    .title-new-product {
+      margin-left: 350px !important;
+    }
+
   </style>
 
 </head>
@@ -337,6 +351,7 @@
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="../pages/newProduct.php">Novo Produto</a></li>
                 <li class="nav-item"> <a class="nav-link" href="../pages/listProduct.php">Lista de Produtos</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../pages/detailsProduct.php">Detalhes do Produto</a></li>
                 <li class="nav-item"> <a class="nav-link" href="../pages/listProvider.php">Lista de Fornecedores</a></li>
               </ul>
             </div>
@@ -426,91 +441,41 @@
       <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper">
-          <div class="row">
-            <div class="col-md-12 grid-margin">
-              <div class="row">
-                <div class="col-12 col-xl-8 mb-4 mb-xl-0">
-                  <h3 class="font-weight-bold">Bem-vindo A Gestão De Estoque </h3>
-                  <h6 class="font-weight-normal mb-0">Todos os sistemas estão funcionando perfeitamente! <span class="text-primary">3 alertas não lidos!</span></h6>
-                </div>
-                <div class="col-12 col-xl-4">
-                 <div class="justify-content-end d-flex">
-                  <div class="dropdown flex-md-grow-1 flex-xl-grow-0">
-                    <button class="btn btn-sm btn-light bg-white dropdown-toggle" type="button" id="dropdownMenuDate2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                     <i class="mdi mdi-calendar"></i> Hoje (<?php echo date("d") . " do " . date("m") . " de " . date("Y")?>)
-                    </button> 
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuDate2">
-                      <a class="dropdown-item" href="#">Maio - Junho</a>
-                      <a class="dropdown-item" href="#">Junho - Julho</a>
-                      <a class="dropdown-item" href="#">Agosto - Setembro</a>
-                      <a class="dropdown-item" href="#">Outubro - Novembro</a>
-                    </div>
-                  </div>
-                 </div>
-                </div>
+
+         <div class="col-lg-12 mt-5 mt-lg-0 d-flex align-items-stretch">
+
+            <div class="row">
+             <form action="../../controllers/saveProduct.php" method="POST" class="form-widht-100px row g-2" enctype="multipart/form-data">
+
+              <div class="section-title justify-content-center">
+                <h2 class="title-new-product">Novo Produto</h2>
+               </div>
+
+              <div class="form-group input-group-sm font-size-register col-md-6">
+               <label for="name" class="form-label">Nome</label>
+               <input type="text" class="form-control form-control-md text-dark" id="name" name="name" required>
               </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6 grid-margin stretch-card">
-              <div class="card tale-bg">
-                <div class="card-people mt-auto">
-                  <img src="../images/dashboard/people.svg" alt="people">
-                  <div class="weather-info">
-                    <div class="d-flex">
-                      <div>
-                        <h2 class="mb-0 font-weight-normal"><i class="icon-sun mr-2"></i>31<sup>°C</sup></h2>
-                      </div>
-                      <div class="ml-2">
-                        <h4 class="location font-weight-normal">Bangalore</h4>
-                        <h6 class="font-weight-normal">India</h6>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+ 
+              <div class="form-group input-group-sm font-size-register col-md-6">
+               <label for="value" class="form-label">Valor</label>
+               <input type="text" class="form-control padding-form form-control-md text-dark" id="value" name="value" required>
               </div>
-            </div>
-            <div class="col-md-6 grid-margin transparent">
-              <div class="row">
-                <div class="col-md-6 mb-4 stretch-card transparent">
-                  <div class="card card-tale">
-                    <div class="card-body">
-                      <p class="mb-4">Total de Produtos</p>
-                      <span class="fs-30 mb-2 num">4.006</span>
-                      <p>10.00% (30 dias)</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 mb-4 stretch-card transparent">
-                  <div class="card card-dark-blue">
-                    <div class="card-body">
-                      <p class="mb-4">Número de Gestores</p>
-                      <div class="fs-30 mb-2 num">644</div>
-                      <p>22.00% (30 dias)</p>
-                    </div>
-                  </div>
-                </div>
+ 
+              <div class="form-group input-group-sm font-size-register col-md-6">
+               <label for="descriptio" class="form-label">Descrição</label>
+               <textarea type="text" class="form-control padding-form form-control-md text-dark" id="description" name="description" required></textarea>
               </div>
-              <div class="row">
-                <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
-                  <div class="card card-light-blue">
-                    <div class="card-body">
-                      <p class="mb-4">Total de Fornecedores</p>
-                      <p class="fs-30 mb-2 num">413</p>
-                      <p>2.00% (30 dias)</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 stretch-card transparent">
-                  <div class="card card-light-danger">
-                    <div class="card-body">
-                      <p class="mb-4">Número de Clientes</p>
-                      <p class="fs-30 mb-2 num">47.033</p>
-                      <p>0.22% (30 dias)</p>
-                    </div>
-                  </div>
-                </div>
+ 
+              <div class="form-group input-group-sm font-size-register col-md-6">
+               <label for="image" class="form-label">Imagem</label>
+               <input type="text" class="form-control padding-form form-control-md text-dark" id="image" name="image" required>
               </div>
+ 
+              <div class="input-group-sm mt-4 d-flex justify-content-center">
+               <input type="submit" class="btn btn-primary btn-block mb-3 font-size-register" value="CRIAR PRODUTO" style="border-radius: 15px; margin-left: 410px !important;">
+              </div>
+ 
+             </form> 
             </div>
           </div>
         <!-- content-wrapper ends -->

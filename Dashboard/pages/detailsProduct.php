@@ -4,7 +4,7 @@
   ini_set('display_errors', 1);
   error_reporting(E_ALL);
   require_once __DIR__."../../../models/ProductDAO.php";
-  $products = ProductDAO::getInstance()->findProducts();
+  $product = ProductDAO::getInstance()->find($_GET['id']);
 
 ?>
 
@@ -452,26 +452,27 @@
              <div action="../../controllers/saveProduct.php" method="POST" class="form-widht-100px row g-2" enctype="multipart/form-data">
 
               <div class="section-title justify-content-center">
-                <h2 class="title-new-product">Lista dos Produtos</h2>
+                <h2 class="title-new-product">Detalhe do Produto</h2>
               </div>
 
-              <?php 
-                foreach($products as $product) {
-              ?>
-              <div class="col-4" style="height: 360px;">
-               <div class="card ml-4" style="width: 14rem; height: 264px; ">
-                <a href="../pages/detailsProduct.php?id=<?php echo $product->id; ?>">
-                 <img style="max-width: 100%" src="<?php echo $product->image; ?>" alt="...">
-                </a>
-                <div class="card-body">
-                 <b class="card-text" style="color: #4B49AC;"><?php echo $product->name; ?></b><br><br>
-                 <b>R$:</b> <?php echo $product->value; ?>
+              <div class="container mt-5">
+               <div class="row">
+                <div class="col-5">
+                 <img src="<?php echo $product->image; ?>" style="width: 100%;"> 
+                </div>
+                <div class="col-7">
+                 <h2 class="pt-3"><b class="text-secondary"> <?php echo $product->name; ?> </b></h2>
                 </div>
                </div>
+               <div class="row mt-5">
+                <div class="col-12">
+                 <p>
+                 <?php echo $product->description; ?>
+                 </p>   
+                </div>   
+               </div>
               </div>
-              <?php
-                }
-              ?>
+             </div>
  
              </div> 
             </div>
