@@ -363,7 +363,7 @@
             </a>
             <div class="collapse" id="form-elements">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Elementos básicos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Elementos básicos</a></li>
               </ul>
             </div>
           </li>
@@ -375,7 +375,7 @@
             </a>
             <div class="collapse" id="charts">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/charts/chartjs.html">ChartJs</a></li>
+                <li class="nav-item"> <a class="nav-link" href="#">ChartJs</a></li>
               </ul>
             </div>
           </li>
@@ -387,7 +387,7 @@
             </a>
             <div class="collapse" id="tables">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/tables/basic-table.html">Tabela Básica</a></li>
+                <li class="nav-item"> <a class="nav-link" href="#">Tabela Básica</a></li>
               </ul>
             </div>
           </li>
@@ -399,7 +399,7 @@
             </a>
             <div class="collapse" id="icons">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/icons/mdi.html">Ícones Mdi</a></li>
+                <li class="nav-item"> <a class="nav-link" href="#">Ícones Mdi</a></li>
               </ul>
             </div>
           </li>
@@ -411,8 +411,8 @@
             </a>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Conecte-se </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Registro </a></li>
+                <li class="nav-item"> <a class="nav-link" href="#"> Conecte-se </a></li>
+                <li class="nav-item"> <a class="nav-link" href="#"> Registro </a></li>
               </ul>
             </div>
           </li>
@@ -424,13 +424,13 @@
             </a>
             <div class="collapse" id="error">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> 404 </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> 500 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="#"> 404 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="#"> 500 </a></li>
               </ul>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/documentation/documentation.html">
+            <a class="nav-link" href="#">
               <i class="icon-paper menu-icon"></i>
               <span class="menu-title">Documentação</span>
             </a>

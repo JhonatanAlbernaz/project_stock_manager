@@ -3,8 +3,8 @@
   session_start();
   ini_set('display_errors', 1);
   error_reporting(E_ALL);
-  require_once __DIR__."../../../models/ProductDAO.php";
-  $products = ProductDAO::getInstance()->findProducts();
+  require_once __DIR__."../../../models/UserDAO.php";
+  $providers = UserDAO::getInstance()->findProvider();
 
 ?>
 
@@ -57,6 +57,22 @@
 
     .title-new-product {
       margin-left: 245px !important;
+    }
+
+    .divprovider {
+      width: 100%;
+      height: 75px;
+      box-shadow: 0 0 24px 0 rgb(0 0 0 / 12%);
+      border-radius: 10px;
+      padding-top: 25px;
+      padding-left: 30px;
+    }
+
+    .divprovider span {
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #37517e;
     }
 
   </style>
@@ -367,7 +383,7 @@
             </a>
             <div class="collapse" id="form-elements">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Elementos básicos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Elementos básicos</a></li>
               </ul>
             </div>
           </li>
@@ -379,7 +395,7 @@
             </a>
             <div class="collapse" id="charts">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/charts/chartjs.html">ChartJs</a></li>
+                <li class="nav-item"> <a class="nav-link" href="#">ChartJs</a></li>
               </ul>
             </div>
           </li>
@@ -391,7 +407,7 @@
             </a>
             <div class="collapse" id="tables">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/tables/basic-table.html">Tabela Básica</a></li>
+                <li class="nav-item"> <a class="nav-link" href="#">Tabela Básica</a></li>
               </ul>
             </div>
           </li>
@@ -403,7 +419,7 @@
             </a>
             <div class="collapse" id="icons">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/icons/mdi.html">Ícones Mdi</a></li>
+                <li class="nav-item"> <a class="nav-link" href="#">Ícones Mdi</a></li>
               </ul>
             </div>
           </li>
@@ -415,8 +431,8 @@
             </a>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Conecte-se </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Registro </a></li>
+                <li class="nav-item"> <a class="nav-link" href="#"> Conecte-se </a></li>
+                <li class="nav-item"> <a class="nav-link" href="#"> Registro </a></li>
               </ul>
             </div>
           </li>
@@ -428,13 +444,13 @@
             </a>
             <div class="collapse" id="error">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> 404 </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> 500 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="#"> 404 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="#"> 500 </a></li>
               </ul>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/documentation/documentation.html">
+            <a class="nav-link" href="#">
               <i class="icon-paper menu-icon"></i>
               <span class="menu-title">Documentação</span>
             </a>
@@ -455,17 +471,13 @@
               </div>
 
               <?php 
-                foreach($products as $product) {
+                foreach($providers as $provider) {
               ?>
-              <div class="col-4" style="height: 360px;">
-               <div class="card ml-4" style="width: 14rem; height: 264px; ">
-                <a href="../pages/detailsProduct.php?id=<?php echo $product->id; ?>">
-                 <img style="max-width: 100%" src="<?php echo $product->image; ?>" alt="...">
-                </a>
-                <div class="card-body">
-                 <b class="card-text" style="color: #282680;"><?php echo $product->name; ?></b><br><br>
-                 <b>R$:</b> <?php echo $product->value; ?>
-                </div>
+              <div class="col-12" style="height: 90px;">
+               <div class="divprovider">
+                 <span><?php echo $provider->name; ?></span>
+                 <b class="card-text" style="color: #282680;"><?php echo "Email: " . $provider->email; ?></b>
+                 <b class="card-text" style="color: #282680;"><?php echo "CNPJ: " . $provider->numberRecord; ?></b>
                </div>
               </div>
               <?php
