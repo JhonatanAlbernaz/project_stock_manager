@@ -1,7 +1,7 @@
 <?php
 
-    require_once("../config/Banco.php");
-    require_once("../models/User.php");
+    require_once __DIR__."../../config/Banco.php";
+    require_once("User.php");
 
     class UserDAO{
         private static $instance;
@@ -40,6 +40,19 @@
             $user->execute();
             
             return $user->fetch();
+        }
+
+        public function findProvider() {
+
+            $stmt = Banco::getInstance()->query("
+                SELECT id, name, email, numberRecord
+                FROM user
+                WHERE userType = 2", 
+            );
+
+            $stmt->execute();
+            
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
         }
 
     }
