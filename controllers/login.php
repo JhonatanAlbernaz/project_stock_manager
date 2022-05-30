@@ -18,7 +18,7 @@
         $_SESSION["userType"] = $user->userType;
         $_SESSION["name"] = $user->name;
 
-        header("Location: ../Dashboard/index.php");
+        header("Location: check.php");
 
     }else {
 
