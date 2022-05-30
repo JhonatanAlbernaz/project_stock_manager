@@ -16,14 +16,15 @@
         public function save(Product $product){
             
             $stm = Banco::getInstance()->prepare("
-                INSERT INTO product(name, value, description, image) 
-                VALUES (:name, :value, :description, :image)
+                INSERT INTO product(name, value, description, image, inventory) 
+                VALUES (:name, :value, :description, :image, :inventory)
             ");
 
             $stm->bindParam('name', $product->name);
             $stm->bindParam('value', $product->value);
             $stm->bindParam('description', $product->description);
             $stm->bindParam('image', $product->image);
+            $stm->bindParam('inventory', $product->inventory);
 
             $stm->execute();
         }

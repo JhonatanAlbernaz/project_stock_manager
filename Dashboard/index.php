@@ -337,7 +337,6 @@
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="pages/newProduct.php">Novo Produto</a></li>
                 <li class="nav-item"> <a class="nav-link" href="pages/listProduct.php">Lista de Produtos</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/detailsProduct.php">Detalhes do Produto</a></li>
                 <li class="nav-item"> <a class="nav-link" href="pages/listProvider.php">Lista de Fornecedores</a></li>
               </ul>
             </div>

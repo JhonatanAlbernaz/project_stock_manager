@@ -469,6 +469,11 @@
                <label for="image" class="form-label">Imagem</label>
                <input type="text" class="form-control padding-form form-control-md text-dark" id="image" name="image" required>
               </div>
+
+              <div class="form-group input-group-sm font-size-register col-md-6">
+               <label for="inventory" class="form-label">Quantidade em Estoque</label>
+               <input type="text" class="form-control padding-form form-control-md text-dark" id="inventory" name="inventory" required>
+              </div>
  
               <div class="input-group-sm mt-4 d-flex justify-content-center">
                <input type="submit" class="btn btn-primary btn-block mb-3 font-size-register" value="CRIAR PRODUTO" style="border-radius: 15px; margin-left: 410px !important;">

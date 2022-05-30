@@ -463,7 +463,7 @@
                  <img style="max-width: 100%" src="<?php echo $product->image; ?>" alt="...">
                 </a>
                 <div class="card-body">
-                 <b class="card-text" style="color: #4B49AC;"><?php echo $product->name; ?></b><br><br>
+                 <b class="card-text" style="color: #282680;"><?php echo $product->name; ?></b><br><br>
                  <b>R$:</b> <?php echo $product->value; ?>
                 </div>
                </div>

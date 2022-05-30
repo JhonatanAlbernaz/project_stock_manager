@@ -355,7 +355,6 @@
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="../pages/newProduct.php">Novo Produto</a></li>
                 <li class="nav-item"> <a class="nav-link" href="../pages/listProduct.php">Lista de Produtos</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../pages/detailsProduct.php">Detalhes do Produto</a></li>
                 <li class="nav-item"> <a class="nav-link" href="../pages/listProvider.php">Lista de Fornecedores</a></li>
               </ul>
             </div>
@@ -461,8 +460,8 @@
                  <img src="<?php echo $product->image; ?>" style="width: 100%;"> 
                 </div>
                 <div class="col-7">
-                 <h2 class="pt-3"><b class="text-primary"> <?php echo $product->name; ?> </b></h2>
-                </div>
+                 <h2 class="pt-3"><b style="color: #282680;"><?php echo $product->name; ?></b></h2><br>
+                 <h4 class="pt-3"><?php echo "<b>R$: </b>" . $product->value; ?></h4>
                </div>
                <div class="row mt-5">
                 <div class="col-12">
