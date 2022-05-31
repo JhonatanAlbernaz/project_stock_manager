@@ -24,24 +24,12 @@
   <!-- End plugin css for this page -->
   <!-- inject:css -->
   <link rel="stylesheet" href="css/vertical-layout-light/style.css">
-  <link rel="stylesheet" href="../assets/css/app.css">
+  <link rel="stylesheet" href="css/app.css">
   <!-- endinject -->
   <link href="images/favicon.ico" rel="icon">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
-
-  <style>
-    
-    .pessoaLogada {
-      font-weight: 400;
-      font-size: 20px;
-      color: #37517e;
-      margin-top: 20px;
-      margin-right: 10px;
-    }
-
-  </style>
 
 </head>
 <body>
@@ -86,9 +74,9 @@
                   </div>
                 </div>
                 <div class="preview-item-content">
-                  <h6 class="preview-subject font-weight-normal">Erro de aplicação</h6>
+                  <h6 class="preview-subject font-weight-normal">Registo de novo utilizador</h6>
                   <p class="font-weight-light small-text mb-0 text-muted">
-                    Agora mesmo
+                  Agora mesmo
                   </p>
                 </div>
               </a>
@@ -99,9 +87,9 @@
                   </div>
                 </div>
                 <div class="preview-item-content">
-                  <h6 class="preview-subject font-weight-normal">Definições</h6>
+                  <h6 class="preview-subject font-weight-normal">Registo de novo utilizador</h6>
                   <p class="font-weight-light small-text mb-0 text-muted">
-                    Mensagem privada
+                   Mensagem Privada
                   </p>
                 </div>
               </a>
@@ -127,11 +115,11 @@
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
               <a class="dropdown-item">
                 <i class="ti-settings text-primary"></i>
-                Definições
+                <p class="text-dark">Definições</p>
               </a>
               <a class="dropdown-item">
                 <i class="ti-power-off text-primary"></i>
-                Sair
+                <p class="text-dark">Sair</p>
               </a>
             </div>
           </li>
@@ -430,13 +418,13 @@
             <div class="col-md-12 grid-margin">
               <div class="row">
                 <div class="col-12 col-xl-8 mb-4 mb-xl-0">
-                  <h3 class="font-weight-bold">Bem-vindo A Gestão De Estoque </h3>
+                  <h3 class="font-weight-bold font-sizer">Bem-vindo A Gestão De Estoque </h3>
                   <h6 class="font-weight-normal mb-0">Todos os sistemas estão funcionando perfeitamente! <span class="text-primary">3 alertas não lidos!</span></h6>
                 </div>
                 <div class="col-12 col-xl-4">
                  <div class="justify-content-end d-flex">
                   <div class="dropdown flex-md-grow-1 flex-xl-grow-0">
-                    <button class="btn btn-sm btn-light bg-white dropdown-toggle" type="button" id="dropdownMenuDate2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <button class="data-de-hj btn btn-sm btn-light bg-white dropdown-toggle" type="button" id="dropdownMenuDate2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                      <i class="mdi mdi-calendar"></i> Hoje (<?php echo date("d") . " do " . date("m") . " de " . date("Y")?>)
                     </button> 
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuDate2">
@@ -454,16 +442,16 @@
           <div class="row">
             <div class="col-md-6 grid-margin stretch-card">
               <div class="card tale-bg">
-                <div class="card-people mt-auto">
-                  <img src="images/dashboard/people.svg" alt="people">
+                <div class="card-people mt-auto" style="padding-top: 0px !important;">
+                  <img src="https://media.istockphoto.com/photos/sculpture-thinker-with-golden-vr-glasses-over-pink-background-picture-id1175935913?k=20&m=1175935913&s=612x612&w=0&h=jWq0RyJMsGZqBfIgj_FjTrybVILrEYM8SIgcokmmlys=" alt="people">
                   <div class="weather-info">
                     <div class="d-flex">
                       <div>
                         <h2 class="mb-0 font-weight-normal"><i class="icon-sun mr-2"></i>31<sup>°C</sup></h2>
                       </div>
                       <div class="ml-2">
-                        <h4 class="location font-weight-normal">Bangalore</h4>
-                        <h6 class="font-weight-normal">India</h6>
+                        <h4 class="location font-weight-normal">Pinheiros/ES</h4>
+                        <h6 class="font-weight-normal">Brasil</h6>
                       </div>
                     </div>
                   </div>

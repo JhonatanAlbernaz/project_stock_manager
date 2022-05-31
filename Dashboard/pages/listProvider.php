@@ -29,53 +29,12 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="../css/vertical-layout-light/style.css">
   <link rel="stylesheet" href="../../assets/css/app.css">
+  <link rel="stylesheet" href="../css/app.css">
   <!-- endinject -->
   <link href="../images/favicon.ico" rel="icon">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
-
-  <style>
-    
-    .pessoaLogada {
-      font-weight: 400;
-      font-size: 20px;
-      color: #37517e;
-      margin-top: 20px;
-      margin-right: 10px;
-    }
-
-    .form-widht-100px {
-      width: 100%;
-      border-top: 3px solid #47b2e4;
-      border-bottom: 3px solid #47b2e4;
-      padding: 30px;
-      background: #fff;
-      box-shadow: 0 0 24px 0 rgb(0 0 0 / 12%);
-      margin-top: 0px;
-    }
-
-    .title-new-product {
-      margin-left: 245px !important;
-    }
-
-    .divprovider {
-      width: 100%;
-      height: 75px;
-      box-shadow: 0 0 24px 0 rgb(0 0 0 / 12%);
-      border-radius: 10px;
-      padding-top: 25px;
-      padding-left: 30px;
-    }
-
-    .divprovider span {
-      font-size: 1.5rem;
-      font-weight: bold;
-      text-transform: uppercase;
-      color: #37517e;
-    }
-
-  </style>
 
 </head>
 <body>
@@ -120,9 +79,9 @@
                   </div>
                 </div>
                 <div class="preview-item-content">
-                  <h6 class="preview-subject font-weight-normal">Erro de aplicação</h6>
+                  <h6 class="preview-subject font-weight-normal">Registo de novo utilizador</h6>
                   <p class="font-weight-light small-text mb-0 text-muted">
-                    Agora mesmo
+                  Agora mesmo
                   </p>
                 </div>
               </a>
@@ -133,9 +92,9 @@
                   </div>
                 </div>
                 <div class="preview-item-content">
-                  <h6 class="preview-subject font-weight-normal">Definições</h6>
+                  <h6 class="preview-subject font-weight-normal">Registo de novo utilizador</h6>
                   <p class="font-weight-light small-text mb-0 text-muted">
-                    Mensagem privada
+                   Mensagem Privada
                   </p>
                 </div>
               </a>
@@ -161,11 +120,11 @@
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
               <a class="dropdown-item">
                 <i class="ti-settings text-primary"></i>
-                Definições
+                <p class="text-dark">Definições</p>
               </a>
               <a class="dropdown-item">
                 <i class="ti-power-off text-primary"></i>
-                Sair
+                <p class="text-dark">Sair</p>
               </a>
             </div>
           </li>
@@ -475,9 +434,10 @@
               ?>
               <div class="col-12" style="height: 90px;">
                <div class="divprovider">
+                 <img src="https://media.istockphoto.com/vectors/young-smiling-man-avatar-3d-vector-people-character-illustration-vector-id1371797889?k=20&m=1371797889&s=612x612&w=0&h=6ELvwvesVcJBhVL8VH3bJdGqLFjDY7FxEk5Hrqo6deQ=">
                  <span><?php echo $provider->name; ?></span>
-                 <b class="card-text" style="color: #282680;"><?php echo "Email: " . $provider->email; ?></b>
-                 <b class="card-text" style="color: #282680;"><?php echo "CNPJ: " . $provider->numberRecord; ?></b>
+                 <b class="card-text margin-left-210px" style="color: #282680;">Email: </b><?php echo $provider->email; ?>
+                 <b class="card-text margin-left-20px" style="color: #282680;">CNPJ: </b><?php echo $provider->numberRecord; ?>
                </div>
               </div>
               <?php
