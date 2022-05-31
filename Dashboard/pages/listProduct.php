@@ -426,7 +426,7 @@
              <div action="../../controllers/saveProduct.php" method="POST" class="form-widht-100px row g-2" enctype="multipart/form-data">
 
               <div class="section-title justify-content-center">
-                <h2 class="title-new-product">Lista dos Produtos</h2>
+                <h2 class="title-list-product">Lista dos Produtos</h2>
               </div>
 
               <?php 
