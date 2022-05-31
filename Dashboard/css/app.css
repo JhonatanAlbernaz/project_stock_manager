@@ -75,6 +75,16 @@
   margin-left: 350px !important;
 }
 
+.title-list-product {
+  margin-left: 310px !important;
+
+
+}
+
+.title-list-provider {
+  margin-left: 260px !important;
+}
+
 .divprovider {
   width: 100%;
   height: 75px;
@@ -99,7 +109,7 @@
 }
 
 .margin-left-210px {
-  margin-left: 210px;
+  margin-left: 175px;
 }
 
 .margin-left-20px {
