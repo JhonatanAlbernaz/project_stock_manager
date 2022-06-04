@@ -1,10 +1,8 @@
 <?php
 
   session_start();
-  ini_set('display_errors', 1);
-  error_reporting(E_ALL);
-  require_once __DIR__."../../../models/ProductDAO.php";
-  $product = ProductDAO::getInstance()->find($_GET['id']);
+  require_once ("../../models/UserDAO.php");
+  $providers =  UserDAO::getInstance()->findProvider();
 
 ?>
 
@@ -35,6 +33,31 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+
+  <style>
+
+    .select-provider {
+        height: 2.575rem;
+        width: 460px;
+        padding: 0.5rem 0.81rem;
+        font-size: 0.875rem;
+        border: 1px solid #CED4DA;
+        background: transparent;
+        border-radius: 0.2rem;
+    }
+
+    .option {
+        height: 2.575rem;
+        width: 460px;
+        color: gray;
+        padding: 1.5rem 0.81rem;
+        font-size: 0.975rem;
+        border: 1px solid #CED4DA;
+        background: transparent;
+        border-radius: 0.2rem;
+    }
+
+  </style>
 
 </head>
 <body>
@@ -315,7 +338,7 @@
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="../">
+            <a class="nav-link" href="../provider.php">
               <i class="icon-grid menu-icon"></i>
               <span class="menu-title">Painel</span>
             </a>
@@ -327,11 +350,11 @@
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="../pages/newProduct.php">Novo Produto</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../pages/listProduct.php">Lista de Produtos</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../pages/listProvider.php">Lista de Fornecedores</a></li>
-              </ul>
+            <ul class="nav flex-column sub-menu">
+              <li class="nav-item"> <a class="nav-link" href="../pages/proposal.php">Proposta</a></li>
+              <li class="nav-item"> <a class="nav-link" href="../pages/listProduct.php">Lista de Produtos</a></li>
+              <li class="nav-item"> <a class="nav-link" href="../pages/proposal.php">Fornecimento</a></li>
+            </ul>
             </div>
           </li>
           <li class="nav-item">
@@ -422,34 +445,43 @@
 
          <div class="col-lg-12 mt-5 mt-lg-0 d-flex align-items-stretch">
 
-            <div class="row" style="width: 103%;">
-             <div action="../../controllers/saveProduct.php" method="POST" class="form-widht-100px row g-2" enctype="multipart/form-data">
+            <div class="row">
+             <form action="../../controllers/saveProposal.php" method="POST" class="form-widht-100px row g-2" enctype="multipart/form-data">
 
               <div class="section-title justify-content-center">
-                <h2 class="title-list-product">Detalhe do Produto</h2>
-              </div>
-
-              <div class="container mt-5">
-               <div class="row">
-                <div class="col-5">
-                 <img src="<?php echo $product->image; ?>" style="width: 100%;"> 
-                </div>
-                <div class="col-7">
-                 <h2 class="pt-3"><b style="color: #282680;"><?php echo $product->name; ?></b></h2><br>
-                 <h4 class="pt-3"><?php echo "<b>R$: </b>" . $product->value; ?></h4>
-                 <h4 class="pt-3"><?php echo "<b>Preciso de: </b>" . $product->inventory . " unidades."; ?></h4>
+                <h2 class="title-new-product">Proposta</h2>
                </div>
-               <div class="row mt-5">
-                <div class="col-12">
-                 <p>
-                 <?php echo $product->description; ?>
-                 </p>   
-                </div>   
-               </div>
-              </div>
-             </div>
  
-             </div> 
+              <div class="form-group input-group-sm font-size-register col-md-6">
+               <label for="id_provider" class="form-label">Fornecedor</label><br>
+               <select class="select-provider" name="id_provider" id="id_provider">
+                <option></option>   
+                <?php 
+                foreach($providers as $provider) {
+                ?>
+                <option value="<?php echo $provider->id; ?>" styles="font-size:13px" class="option"><?php echo $provider->name; ?></option><br>
+                <?php
+                }
+                ?>
+               </select>
+               <!-- <input type="number" class="form-control padding-form form-control-md text-dark" id="id_provider" name="id_provider" required> -->
+              </div>
+ 
+              <div class="form-group input-group-sm font-size-register col-md-6">
+               <label for="number" class="form-label">Quantidade</label>
+               <input type="number" class="form-control padding-form form-control-md text-dark" id="amount" name="amount" required></input>
+              </div>
+ 
+              <div class="form-group input-group-sm font-size-register col-md-6">
+               <label for="value" class="form-label">Valor</label>
+               <input type="text" class="form-control padding-form form-control-md text-dark" id="value" name="value" required>
+              </div>
+ 
+              <div class="input-group-sm mt-4 d-flex justify-content-center">
+               <input type="submit" class="btn btn-primary btn-block mb-3 font-size-register" value="CRIAR PROPOSTA" style="border-radius: 15px; margin-left: 410px !important;">
+              </div>
+ 
+             </form> 
             </div>
           </div>
         <!-- content-wrapper ends -->

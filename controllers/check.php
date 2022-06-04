@@ -12,7 +12,7 @@
     }else {
 
         $_SESSION["erro_login"] = "Login invalido, senha ou email invalidos";
-        header("Location: ../index.php");
+        header("Location: ../Dashboard/provider.php");
 
     }
     
