@@ -351,9 +351,9 @@
             </a>
             <div class="collapse" id="ui-basic">
             <ul class="nav flex-column sub-menu">
+              <li class="nav-item"> <a class="nav-link" href="../pages/supply.php">Fornecimento</a></li>
               <li class="nav-item"> <a class="nav-link" href="../pages/proposal.php">Proposta</a></li>
               <li class="nav-item"> <a class="nav-link" href="../pages/listProduct.php">Lista de Produtos</a></li>
-              <li class="nav-item"> <a class="nav-link" href="../pages/proposal.php">Fornecimento</a></li>
             </ul>
             </div>
           </li>
@@ -457,11 +457,11 @@
                <select class="select-provider" name="id_provider" id="id_provider">
                 <option></option>   
                 <?php 
-                foreach($providers as $provider) {
+                 foreach($providers as $provider) {
                 ?>
-                <option value="<?php echo $provider->id; ?>" styles="font-size:13px" class="option"><?php echo $provider->name; ?></option><br>
+                  <option value="<?php echo $provider->id; ?>" styles="font-size:13px" class="option"><?php echo $provider->name; ?></option><br>
                 <?php
-                }
+                  }
                 ?>
                </select>
                <!-- <input type="number" class="form-control padding-form form-control-md text-dark" id="id_provider" name="id_provider" required> -->

@@ -323,9 +323,9 @@
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/supply.php">Fornecimento</a></li>
                 <li class="nav-item"> <a class="nav-link" href="pages/proposal.php">Proposta</a></li>
                 <li class="nav-item"> <a class="nav-link" href="pages/listProduct.php">Lista de Produtos</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/proposal.php">Fornecimento</a></li>
               </ul>
             </div>
           </li>
