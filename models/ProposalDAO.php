@@ -16,10 +16,11 @@
         public function save(Proposal $proposal){
             
             $stm = Banco::getInstance()->prepare("
-                INSERT INTO proposal(id_provider, amount, value) 
-                VALUES (:id_provider, :amount, :value)
+                INSERT INTO proposal(id_supply, id_provider, amount, value) 
+                VALUES (:id_supply, :id_provider, :amount, :value)
             ");
 
+            $stm->bindParam('id_supply', $proposal->id_supply);
             $stm->bindParam('id_provider', $proposal->id_provider);
             $stm->bindParam('amount', $proposal->amount);
             $stm->bindParam('value', $proposal->value);

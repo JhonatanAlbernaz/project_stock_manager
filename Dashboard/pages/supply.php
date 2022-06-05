@@ -489,7 +489,7 @@
  
               <div class="form-group input-group-sm font-size-register col-md-6">
                <label for="value" class="form-label">Valor</label>
-               <input type="number" class="form-control padding-form form-control-md text-dark" id="value" name="value" required>
+               <input type="text" class="form-control padding-form form-control-md text-dark" id="value" name="value" required>
               </div>
  
               <div class="input-group-sm mt-4 d-flex justify-content-center">

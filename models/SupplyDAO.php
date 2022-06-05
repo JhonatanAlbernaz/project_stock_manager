@@ -28,18 +28,18 @@
             $stm->execute();
         }
 
-        // public function findProposal() {
+        public function findSupply() {
 
-        //     $stmt= Banco::getInstance()->query("
-        //         SELECT id, id_supply, id_provider, amount, value 
-        //         FROM proposal",
-        //     );
+            $stmt= Banco::getInstance()->query("
+                SELECT id, id_product, id_proposal, amount, value 
+                FROM supply",
+            );
             
-        //     $stmt->execute();
+            $stmt->execute();
 
-        //     return $stmt->fetchAll(PDO::FETCH_OBJ);
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
 
-        // }
+        }
 
     }
 

@@ -6,7 +6,7 @@
   require_once("../models/Proposal.php");
   require_once("../models/ProposalDAO.php");
 
-  ProposalDAO::getInstance()->save(new proposal($_POST['id_provider'], $_POST['amount'], $_POST['value']));
+  ProposalDAO::getInstance()->save(new proposal($_POST['id_supply'], $_POST['id_provider'], $_POST['amount'], $_POST['value']));
 
   header("Location: ../Dashboard/provider.php");
 

@@ -10,6 +10,6 @@
 
   SupplyDAO::getInstance()->save(new supply($_POST['id_product'], $_POST['id_proposal'], $_POST['amount'], $_POST['value']));
 
-  header("Location: ../index.php");
+  header("Location: ../Dashboard/provider.php");
 
 ?>
