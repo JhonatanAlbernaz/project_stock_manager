@@ -355,7 +355,9 @@
             <ul class="nav flex-column sub-menu">
               <li class="nav-item"> <a class="nav-link" href="../pages/supply.php">Fornecimento</a></li>
               <li class="nav-item"> <a class="nav-link" href="../pages/proposal.php">Proposta</a></li>
-              <li class="nav-item"> <a class="nav-link" href="../pages/listProduct.php">Lista de Produtos</a></li>
+              <li class="nav-item"> <a class="nav-link" href="../pages/listSupply.php">Lista de Fornecimento</a></li>
+              <li class="nav-item"> <a class="nav-link" href="../pages/listProposal.php">Lista de Proposta</a></li>
+              <li class="nav-item"> <a class="nav-link" href="../pages/listProductProvider.php">Lista de Produtos</a></li>
             </ul>
             </div>
           </li>
@@ -493,7 +495,7 @@
               </div>
  
               <div class="input-group-sm mt-4 d-flex justify-content-center">
-               <input type="submit" class="btn btn-primary btn-block mb-3 font-size-register" value="CRIAR FORNECIMENTO" style="border-radius: 15px; margin-left: 410px !important;">
+               <input type="submit" class="btn btn-primary btn-block mb-3 font-size-register" value="CRIAR FORNECIMENTO" style="border-radius: 15px; margin-left: 385px !important;">
               </div>
  
              </form> 
