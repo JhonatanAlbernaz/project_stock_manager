@@ -1,10 +1,10 @@
 <?php
 
   session_start();
-  require_once ("../../models/UserDAO.php");
-  require_once ("../../models/SupplyDAO.php");
-  $providers =  UserDAO::getInstance()->findProvider();
-  $supplys =  SupplyDAO::getInstance()->findSupply();
+  require_once ("../../models/ProposalDAO.php");
+  require_once ("../../models/ProductDAO.php");
+  $proposals =  ProposalDAO::getInstance()->findProposal();
+  $products = ProductDAO::getInstance()->findProducts();
 
 ?>
 
@@ -448,20 +448,20 @@
          <div class="col-lg-12 mt-5 mt-lg-0 d-flex align-items-stretch">
 
             <div class="row">
-             <form action="../../controllers/saveProposal.php" method="POST" class="form-widht-100px row g-2" enctype="multipart/form-data">
+             <form action="../../controllers/saveSupply.php" method="POST" class="form-widht-100px row g-2" enctype="multipart/form-data">
 
               <div class="section-title justify-content-center">
-                <h2 class="title-new-product">Proposta</h2>
-               </div>
+                <h2 class="title-new-product">Fornecimento</h2>
+              </div>
 
               <div class="form-group input-group-sm font-size-register col-md-6">
-               <label for="id_supply" class="form-label">Fornecimento</label><br>
-               <select class="select-provider" name="id_supply" id="id_supply">
+               <label for="id_product" class="form-label">Produto</label><br>
+               <select class="select-provider" name="id_product" id="id_product">
                 <option></option>   
                 <?php 
-                 foreach($supplys as $supply) {
+                 foreach($products as $product) {
                 ?>
-                  <option value="<?php echo $supply->id; ?>" styles="font-size:13px" class="option"><?php echo "Qtd: " . $supply->amount . " - R$: " . $supply->value; ?></option><br>
+                  <option value="<?php echo $product->id; ?>" styles="font-size:13px" class="option"><?php echo $product->name; ?></option><br>
                 <?php
                   }
                 ?>
@@ -469,13 +469,13 @@
               </div>
  
               <div class="form-group input-group-sm font-size-register col-md-6">
-               <label for="id_provider" class="form-label">Fornecedor</label><br>
-               <select class="select-provider" name="id_provider" id="id_provider">
+               <label for="id_proposal" class="form-label">Proposta</label><br>
+               <select class="select-provider" name="id_proposal" id="id_proposal">
                 <option></option>   
                 <?php 
-                 foreach($providers as $provider) {
+                 foreach($proposals as $proposal) {
                 ?>
-                  <option value="<?php echo $provider->id; ?>" styles="font-size:13px" class="option"><?php echo $provider->name; ?></option><br>
+                  <option value="<?php echo $proposal->id; ?>" styles="font-size:13px" class="option"><?php echo "Qtd: " . $proposal->amount . " - R$: " . $proposal->value; ?></option><br>
                 <?php
                   }
                 ?>
@@ -493,7 +493,7 @@
               </div>
  
               <div class="input-group-sm mt-4 d-flex justify-content-center">
-               <input type="submit" class="btn btn-primary btn-block mb-3 font-size-register" value="CRIAR PROPOSTA" style="border-radius: 15px; margin-left: 410px !important;">
+               <input type="submit" class="btn btn-primary btn-block mb-3 font-size-register" value="CRIAR FORNECIMENTO" style="border-radius: 15px; margin-left: 410px !important;">
               </div>
  
              </form> 
