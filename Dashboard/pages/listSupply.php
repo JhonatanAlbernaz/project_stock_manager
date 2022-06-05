@@ -1,6 +1,10 @@
 <?php
 
   session_start();
+  ini_set('display_errors', 1);
+  error_reporting(E_ALL);
+  require_once __DIR__."../../../models/SupplyDAO.php";
+  $supplys = SupplyDAO::getInstance()->findSupply();
 
 ?>
 
@@ -13,23 +17,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Ms Code</title>
   <!-- plugins:css -->
-  <link rel="stylesheet" href="vendors/feather/feather.css">
-  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
-  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="../vendors/feather/feather.css">
+  <link rel="stylesheet" href="../vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="../vendors/css/vendor.bundle.base.css">
   <!-- endinject -->
   <!-- Plugin css for this page -->
-  <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css">
-  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
-  <link rel="stylesheet" type="text/css" href="js/select.dataTables.min.css">
+  <link rel="stylesheet" href="../vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+  <link rel="stylesheet" href="../vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" type="text/css" href="../js/select.dataTables.min.css">
   <!-- End plugin css for this page -->
   <!-- inject:css -->
-  <link rel="stylesheet" href="css/vertical-layout-light/style.css">
-  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="../css/vertical-layout-light/style.css">
+  <link rel="stylesheet" href="../../assets/css/app.css">
+  <link rel="stylesheet" href="../css/app.css">
   <!-- endinject -->
-  <link href="images/favicon.ico" rel="icon">
+  <link href="../images/favicon.ico" rel="icon">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+
+  <style>
+
+    .margin-left-210px {
+        margin-left: 145px;
+    }
+
+    .title-list-provider {
+        margin-left: 285px !important;
+    }
+
+    .divprovider img {
+        width: 75px;
+        margin-top: -15px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }  
+
+  </style>    
 
 </head>
 <body>
@@ -37,8 +61,8 @@
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="images/6ilrpjqsny80b5ti.png" class="mr-2" alt="logo"/></a>
-        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/favicon.ico" alt="logo"/></a>
+        <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="../images/6ilrpjqsny80b5ti.png" class="mr-2" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="../images/favicon.ico" alt="logo"/></a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
         <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -110,7 +134,7 @@
           </li>
           <li class="nav-item nav-profile dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-              <img src="images/faces/face28.jpg" alt="profile"/>
+              <img src="../images/faces/face28.jpg" alt="profile"/>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
               <a class="dropdown-item">
@@ -310,7 +334,7 @@
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="index.php">
+            <a class="nav-link" href="../">
               <i class="icon-grid menu-icon"></i>
               <span class="menu-title">Painel</span>
             </a>
@@ -318,16 +342,16 @@
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="icon-layout menu-icon"></i>
-              <span class="menu-title">Fornecedor</span>
+              <span class="menu-title">Produtos</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/supply.php">Novo Fornecimento</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/proposal.php">Nova Proposta</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/listSupply.php">Lista de Fornecimento</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/listProposal.php">Lista de Proposta</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/listProductProvider.php">Lista de Produtos</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../pages/supply.php">Novo Fornecimento</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../pages/proposal.php">Nova Proposta</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../pages/listSupply.php">Lista de Fornecimento</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../pages/listProposal.php">Lista de Proposta</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../pages/listProductProvider.php">Lista de Produtos</a></li>
               </ul>
             </div>
           </li>
@@ -416,91 +440,33 @@
       <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper">
-          <div class="row">
-            <div class="col-md-12 grid-margin">
-              <div class="row">
-                <div class="col-12 col-xl-8 mb-4 mb-xl-0">
-                  <h3 class="font-weight-bold font-sizer">Bem-vindo Fornecedor </h3>
-                  <h6 class="font-weight-normal mb-0">Todos os sistemas estão funcionando perfeitamente! <span class="text-primary">3 alertas não lidos!</span></h6>
-                </div>
-                <div class="col-12 col-xl-4">
-                 <div class="justify-content-end d-flex">
-                  <div class="dropdown flex-md-grow-1 flex-xl-grow-0">
-                    <button class="data-de-hj btn btn-sm btn-light bg-white dropdown-toggle" type="button" id="dropdownMenuDate2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                     <i class="mdi mdi-calendar"></i> Hoje (<?php echo date("d") . " do " . date("m") . " de " . date("Y")?>)
-                    </button> 
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuDate2">
-                      <a class="dropdown-item" href="#">Maio - Junho</a>
-                      <a class="dropdown-item" href="#">Junho - Julho</a>
-                      <a class="dropdown-item" href="#">Agosto - Setembro</a>
-                      <a class="dropdown-item" href="#">Outubro - Novembro</a>
-                    </div>
-                  </div>
-                 </div>
-                </div>
+
+         <div class="col-lg-12 mt-5 mt-lg-0 d-flex align-items-stretch">
+
+            <div class="row" style="width: 103%;">
+             <div action="../../controllers/saveProduct.php" method="POST" class="form-widht-100px row g-2" enctype="multipart/form-data">
+
+              <div class="section-title justify-content-center">
+                <h2 class="title-list-provider">Lista de Fornecimento</h2>
               </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6 grid-margin stretch-card">
-              <div class="card tale-bg">
-                <div class="card-people mt-auto" style="padding-top: 0px !important;">
-                  <img src="https://media.istockphoto.com/vectors/money-coin-hand-holding-on-pastel-background-holding-money-wallet-in-vector-id1395866450?k=20&m=1395866450&s=612x612&w=0&h=XfT7wdCSMY1LC33MvnQpMbdx-qkyfmbwn7PIfza-wkE=" alt="people">
-                  <div class="weather-info">
-                    <div class="d-flex">
-                      <div>
-                        <h2 class="mb-0 font-weight-normal"><i class="icon-sun mr-2"></i>31<sup>°C</sup></h2>
-                      </div>
-                      <div class="ml-2">
-                        <h4 class="location font-weight-normal">Pinheiros/ES</h4>
-                        <h6 class="font-weight-normal">Brasil</h6>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+
+              <?php 
+                foreach($supplys as $supply) {
+              ?>
+              <div class="col-12" style="height: 90px;">
+               <div class="divprovider">
+                 <img src="https://media.istockphoto.com/photos/wallet-and-digital-security-online-payment-and-cyber-protection-picture-id1386739357?k=20&m=1386739357&s=612x612&w=0&h=DzR7DjH1DipGe24HP8mctTgp05YCfhlxSM919XWPIeY=">
+                 <span>Produto: <?php echo $supply->id_product; ?></span>
+                 <span>Proposta: <?php echo $supply->id_proposal; ?></span>
+                 <b class="card-text margin-left-210px" style="color: #282680;">Quantidade: </b><?php echo $supply->amount . " unidades."; ?>
+                 <b class="card-text margin-left-20px" style="color: #282680;">Valor R$: </b><?php echo $supply->value; ?>
+               </div>
               </div>
-            </div>
-            <div class="col-md-6 grid-margin transparent">
-              <div class="row">
-                <div class="col-md-6 mb-4 stretch-card transparent">
-                  <div class="card card-tale">
-                    <div class="card-body">
-                      <p class="mb-4">Total de Produtos</p>
-                      <span class="fs-30 mb-2 num">4.006</span>
-                      <p>10.00% (30 dias)</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 mb-4 stretch-card transparent">
-                  <div class="card card-dark-blue">
-                    <div class="card-body">
-                      <p class="mb-4">Número de Gestores</p>
-                      <div class="fs-30 mb-2 num">644</div>
-                      <p>22.00% (30 dias)</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
-                  <div class="card card-light-blue">
-                    <div class="card-body">
-                      <p class="mb-4">Total de Fornecedores</p>
-                      <p class="fs-30 mb-2 num">413</p>
-                      <p>2.00% (30 dias)</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 stretch-card transparent">
-                  <div class="card card-light-danger">
-                    <div class="card-body">
-                      <p class="mb-4">Número de Clientes</p>
-                      <p class="fs-30 mb-2 num">47.033</p>
-                      <p>0.22% (30 dias)</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <?php
+                }
+              ?>
+ 
+             </div> 
             </div>
           </div>
         <!-- content-wrapper ends -->
@@ -528,9 +494,9 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <!-- plugins:js -->
-  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <script src="../vendors/js/vendor.bundle.base.js"></script>
 
-  <script src="../assets/js/teste.js"></script>
+  <script src="../../assets/js/teste.js"></script>
   <!-- endinject -->
   <!-- Plugin js for this page -->
   <script src="vendors/chart.js/Chart.min.js"></script>
@@ -540,17 +506,16 @@
 
   <!-- End plugin js for this page -->
   <!-- inject:js -->
-  <script src="js/off-canvas.js"></script>
-  <script src="js/hoverable-collapse.js"></script>
-  <script src="js/template.js"></script>
-  <script src="js/settings.js"></script>
-  <script src="js/todolist.js"></script>
+  <script src="../js/off-canvas.js"></script>
+  <script src="../js/hoverable-collapse.js"></script>
+  <script src="../js/template.js"></script>
+  <script src="../js/settings.js"></script>
+  <script src="../js/todolist.js"></script>
   <!-- endinject -->
   <!-- Custom js for this page-->
-  <script src="js/dashboard.js"></script>
-  <script src="js/Chart.roundedBarCharts.js"></script>
+  <script src="../js/dashboard.js"></script>
+  <script src="../js/Chart.roundedBarCharts.js"></script>
   <!-- End custom js for this page-->
 </body>
 
 </html>
-
