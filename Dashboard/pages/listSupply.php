@@ -39,7 +39,7 @@
   <style>
 
     .margin-left-210px {
-        margin-left: 145px;
+        margin-left: 30px;
     }
 
     .title-list-provider {
@@ -456,8 +456,6 @@
               <div class="col-12" style="height: 90px;">
                <div class="divprovider">
                  <img src="https://media.istockphoto.com/photos/wallet-and-digital-security-online-payment-and-cyber-protection-picture-id1386739357?k=20&m=1386739357&s=612x612&w=0&h=DzR7DjH1DipGe24HP8mctTgp05YCfhlxSM919XWPIeY=">
-                 <span>Produto: <?php echo $supply->id_product; ?></span>
-                 <span>Proposta: <?php echo $supply->id_proposal; ?></span>
                  <b class="card-text margin-left-210px" style="color: #282680;">Quantidade: </b><?php echo $supply->amount . " unidades."; ?>
                  <b class="card-text margin-left-20px" style="color: #282680;">Valor R$: </b><?php echo $supply->value; ?>
                </div>
