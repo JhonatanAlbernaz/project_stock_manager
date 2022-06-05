@@ -27,6 +27,19 @@
             $stm->execute();
         }
 
+        public function findProposal() {
+
+            $stmt= Banco::getInstance()->query("
+                SELECT id, id_supply, id_provider, amount, value 
+                FROM proposal",
+            );
+            
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_OBJ);
+
+        }
+
     }
 
 ?>
