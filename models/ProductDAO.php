@@ -32,7 +32,7 @@
         public function findProducts() {
 
             $stmt= Banco::getInstance()->query("
-                SELECT id, name, value, image FROM product",
+                SELECT id, name, value, image, inventory FROM product",
             );
             
             $stmt->execute();
