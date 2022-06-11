@@ -328,11 +328,11 @@
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="../pages/newProduct.php">Novo Produto</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../pages/listProduct.php">Lista de Produtos</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../pages/listProvider.php">Lista de Fornecedores</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../pages/listSupply.php">Lista de Fornecimento</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../pages/listProposal.php">Lista de Proposta</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../pagesProvider/supply.php">Novo Fornecimento</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../pagesProvider/proposal.php">Nova Proposta</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../pagesProvider/listSupply.php">Lista de Fornecimento</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../pagesProvider/listProposal.php">Lista de Proposta</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../pagesProvider/listProductProvider.php">Lista de Produtos</a></li>
               </ul>
             </div>
           </li>
