@@ -39,7 +39,7 @@
   <style>
 
     .margin-left-210px {
-        margin-left: 30px;
+        margin-left: 10px;
     }
 
     .title-list-provider {
@@ -453,9 +453,9 @@
               <?php 
                 foreach($supplys as $supply) {
               ?>
-              <div class="col-12" style="height: 90px;">
+              <div class="col-6" style="height: 90px;">
                <div class="divprovider">
-                 <img src="https://media.istockphoto.com/photos/wallet-and-digital-security-online-payment-and-cyber-protection-picture-id1386739357?k=20&m=1386739357&s=612x612&w=0&h=DzR7DjH1DipGe24HP8mctTgp05YCfhlxSM919XWPIeY=">
+                 <img src="https://media.istockphoto.com/vectors/young-woman-jane-thinking-and-dreaming-mind-behavior-mental-mindset-vector-id1363343994?k=20&m=1363343994&s=612x612&w=0&h=JI9aYambhf26AbnzOL7Z-h5IXpK1syWuejoF1YvceNg=">
                  <b class="card-text margin-left-210px" style="color: #282680;">Quantidade: </b><?php echo $supply->amount . " unidades."; ?>
                  <b class="card-text margin-left-20px" style="color: #282680;">Valor R$: </b><?php echo $supply->value; ?>
                </div>
