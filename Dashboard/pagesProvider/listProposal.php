@@ -39,7 +39,7 @@
   <style>
 
     .margin-left-210px {
-        margin-left: 30px;
+        margin-left: 10px;
     }
 
     .divprovider img {
@@ -449,7 +449,7 @@
               <?php 
                 foreach($proposals as $proposal) {
               ?>
-              <div class="col-12" style="height: 90px;">
+              <div class="col-6" style="height: 90px;">
                <div class="divprovider">
                  <img src="https://media.istockphoto.com/photos/wallet-and-digital-security-online-payment-and-cyber-protection-picture-id1386739357?k=20&m=1386739357&s=612x612&w=0&h=DzR7DjH1DipGe24HP8mctTgp05YCfhlxSM919XWPIeY=">
                  <b class="card-text margin-left-210px" style="color: #282680;">Quantidade: </b><?php echo $proposal->amount . " unidades."; ?>
