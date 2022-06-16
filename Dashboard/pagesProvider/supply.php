@@ -59,6 +59,13 @@
         border-radius: 0.2rem;
     }
 
+    .link-menu {
+      margin-left: 50px;
+      margin-top: -30px;
+      position: absolute;
+      text-decoration: none !important;
+    }
+
   </style>
 
 </head>
@@ -149,7 +156,7 @@
               </a>
               <a class="dropdown-item">
                 <i class="ti-power-off text-primary"></i>
-                <p class="text-dark">Sair</p>
+                <a href="../Logout/logout.php" class="text-dark link-menu">Sair</a>
               </a>
             </div>
           </li>
@@ -348,7 +355,7 @@
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="icon-layout menu-icon"></i>
-              <span class="menu-title">Produtos</span>
+              <span class="menu-title">Fornecedor</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic">

@@ -3,8 +3,8 @@
   session_start();
   ini_set('display_errors', 1);
   error_reporting(E_ALL);
-  require_once __DIR__."../../../models/ProposalDAO.php";
-  $proposals = ProposalDAO::getInstance()->findProposal();
+  require_once __DIR__."../../../models/ProductDAO.php";
+  $product = ProductDAO::getInstance()->find($_GET['id']);
 
 ?>
 
@@ -19,7 +19,6 @@
   <!-- plugins:css -->
   <link rel="stylesheet" href="../vendors/feather/feather.css">
   <link rel="stylesheet" href="../vendors/ti-icons/css/themify-icons.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <link rel="stylesheet" href="../vendors/css/vendor.bundle.base.css">
   <!-- endinject -->
   <!-- Plugin css for this page -->
@@ -38,58 +37,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
 
   <style>
-
-    .margin-left-210px {
-        margin-left: 10px;
-    }
-
-    .divprovider img {
-        width: 75px;
-        margin-top: -15px;
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
-    }  
-    
     .link-menu {
       margin-left: 50px;
       margin-top: -30px;
       position: absolute;
       text-decoration: none !important;
     }
-
-    .div-X {
-      width: 9%;
-      height: 75px;
-      margin-left: 765px;
-      margin-top: -75px;
-      text-align: center;
-      box-shadow: 0 0 24px 0 rgb(0 0 0 / 12%);
-      padding: 25px;
-      font-size: 25px;
-    }
-
-    .div-X i {
-      color: red;
-    }
-
-    .div-check {
-      width: 9%;
-      height: 75px;
-      border-top-right-radius: 10px;
-      margin-left: 865px;
-      border-bottom-right-radius: 10px;
-      box-shadow: 0 0 24px 0 rgb(0 0 0 / 12%);
-      margin-top: -75px;
-      text-align: center;
-      padding: 25px;
-      font-size: 25px;
-    }
-
-    .div-check i {
-      color: green;
-    }
-
-  </style>    
+  </style>
 
 </head>
 <body>
@@ -378,16 +332,16 @@
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="icon-layout menu-icon"></i>
-              <span class="menu-title">Produtos</span>
+              <span class="menu-title">Fornecedor</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="../pagesManager/newProduct.php">Novo Produto</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../pagesManager/listProduct.php">Lista de Produtos</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../pagesManager/listProvider.php">Lista de Fornecedores</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../pagesManager/listSupply.php">Lista de Fornecimento</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../pagesManager/listProposal.php">Lista de Proposta</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../pagesProvider/supply.php">Novo Fornecimento</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../pagesProvider/proposal.php">Nova Proposta</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../pagesProvider/listSupply.php">Lista de Fornecimento</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../pagesProvider/listProposal.php">Lista de Proposta</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../pagesProvider/listProductProvider.php">Lista de Produtos</a></li>
               </ul>
             </div>
           </li>
@@ -483,28 +437,28 @@
              <div action="../../controllers/saveProduct.php" method="POST" class="form-widht-100px row g-2" enctype="multipart/form-data">
 
               <div class="section-title justify-content-center">
-                <h2 class="title-list-provider">Lista de Proposta</h2>
+                <h2 class="title-list-product">Detalhe do Produto</h2>
               </div>
 
-              <?php 
-                foreach($proposals as $proposal) {
-              ?>
-              <div class="col-12" style="height: 90px;">
-               <div class="divprovider">
-                 <img src="https://media.istockphoto.com/photos/wallet-and-digital-security-online-payment-and-cyber-protection-picture-id1386739357?k=20&m=1386739357&s=612x612&w=0&h=DzR7DjH1DipGe24HP8mctTgp05YCfhlxSM919XWPIeY=">
-                 <b class="card-text margin-left-210px" style="color: #282680;">Quantidade: </b><?php echo $proposal->amount . " unidades."; ?>
-                 <b class="card-text margin-left-20px" style="color: #282680;">Valor R$: </b><?php echo $proposal->value; ?>
-                 <div class="div-X">
-                  <a href="../../views/dropProposal.php?idProposal=<?php echo $proposal->id; ?>"><i class="fa-solid fa-x"></i></a>
-                 </div>
-                 <div class="div-check">
-                  <a href="../../Dashboard/pagesManager/listProposal.php"><i class="fa-solid fa-check"></i></a>
-                 </div>
+              <div class="container mt-5">
+               <div class="row">
+                <div class="col-5">
+                 <img src="<?php echo $product->image; ?>" style="width: 100%;"> 
                 </div>
+                <div class="col-7">
+                 <h2 class="pt-3"><b style="color: #282680;"><?php echo $product->name; ?></b></h2><br>
+                 <h4 class="pt-3"><?php echo "<b>R$: </b>" . $product->value; ?></h4>
+                 <h4 class="pt-3"><?php echo "<b>Preciso de: </b>" . $product->inventory . " unidades."; ?></h4>
+               </div>
+               <div class="row mt-5">
+                <div class="col-12">
+                 <p>
+                 <?php echo $product->description; ?>
+                 </p>   
+                </div>   
+               </div>
               </div>
-              <?php
-                }
-              ?>
+             </div>
  
              </div> 
             </div>

@@ -128,7 +128,7 @@
               </a>
               <a class="dropdown-item">
                 <i class="ti-power-off text-primary"></i>
-                <a href="#" class="text-dark link-menu">Sair</a>
+                <a href="Logout/logout.php" class="text-dark link-menu">Sair</a>
               </a>
             </div>
           </li>
