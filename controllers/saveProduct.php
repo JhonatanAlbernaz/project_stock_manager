@@ -8,6 +8,6 @@
 
   ProductDAO::getInstance()->save(new product($_POST['name'], $_POST['value'], $_POST['description'], $_POST['image'], $_POST['inventory']));
 
-  header("Location: ../Dashboard/pages/newProduct.php");
+  header("Location: ../Dashboard/pagesManager/listProduct.php");
 
 ?>

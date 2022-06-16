@@ -434,7 +434,7 @@
               <?php 
                 foreach($products as $product) {
               ?>
-              <div class="col-4" style="height: 360px;">
+              <div class="col-4" style="height: 390px;">
                <div class="card ml-4" style="width: 14rem; height: 264px; ">
                 <a href="../pagesManager/detailsProduct.php?id=<?php echo $product->id; ?>">
                  <img style="max-width: 100%" src="<?php echo $product->image; ?>" alt="...">
