@@ -1,0 +1,218 @@
+.pessoaLogada {
+    font-weight: 400;
+    font-size: 20px;
+    color: #37517e;
+    margin-top: 20px;
+    margin-right: 10px;
+    font-family: 'Tiro Devanagari Sanskrit', serif;
+}
+  
+.card.card-tale {
+    color: #ffffff;
+    background-image: url(https://media.istockphoto.com/photos/blue-product-background-stand-or-podium-pedestal-on-advertising-with-picture-id1297380220?k=20&m=1297380220&s=612x612&w=0&h=5B1kG3RKqtlUYvRcmeTGiN6vOfXIBKIUyKLMW_5s66s=) !important;
+    background-position: center;
+    background-size: cover;
+}
+  
+.card.card-dark-blue {
+    color: #ffffff;
+    background-image: url(https://media.istockphoto.com/vectors/minimal-black-scene-with-geometric-shapes-and-palm-leaves-cylindrical-vector-id1312311751?k=20&m=1312311751&s=612x612&w=0&h=-CPhW1SQnT2nYTejig-U7pvjJM9_Sk5FmGwj8haBHI8=);
+    background-position: center;
+    background-size: cover;
+}
+
+.card.card-light-blue {
+    color: #ffffff;
+    background-image: url(https://media.istockphoto.com/photos/abstract-3d-design-picture-id1155674348?k=20&m=1155674348&s=612x612&w=0&h=I8xjO3fqbJQ3vr8ppxsYQOQoHr92X-k2C0iT2dDk2pA=);
+    background-position: center;
+    background-size: cover;
+}
+
+.card.card-light-danger {
+    color: #ffffff;
+    background-image: url(https://media.istockphoto.com/photos/pedestal-or-product-podium-mockup-isolated-from-teal-colored-picture-id1266423763?k=20&m=1266423763&s=612x612&w=0&h=AZfRHhJw04fKR0QsvewQFymw9VwXiyidnosQD57-JK4=);
+    background-position: center;
+    background-size: cover;
+}
+
+.font-weight-bold {
+    font-weight: 700 !important;
+    font-family: 'Tiro Gurmukhi', serif;
+}
+
+.font-sizer {
+    font-size: 1.825rem;
+}
+
+.card-people {
+    position: relative;
+    padding-top: 0px !important;
+    padding-bottom: 5px;
+}
+
+.font-weight-normal {
+    font-weight: 400 !important;
+    font-family: 'Tiro Telugu', serif;
+    font-size: 1.2375rem;
+}
+
+.data-de-hj {
+    font-family: 'Merriweather', serif;
+    font-size: 1.012rem !important;
+}
+
+.form-widht-100px {
+    width: 100%;
+    border-top: 3px solid #47b2e4;
+    border-bottom: 3px solid #47b2e4;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 0 24px 0 rgb(0 0 0 / 12%);
+    margin-top: 0px;
+}
+
+.title-new-product {
+    margin-left: 350px !important;
+}
+
+.title-list-product {
+    margin-left: 310px !important;
+}
+
+.title-list-provider {
+    margin-left: 260px !important;
+}
+
+.divprovider {
+    width: 100%;
+    height: 75px;
+    box-shadow: 0 0 24px 0 rgb(0 0 0 / 12%);
+    border-radius: 10px;
+    padding-top: 15px;
+}
+
+.divprovider span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #47b2e4;
+    margin-left: 15px;
+}
+
+.divprovider img {
+    width: 83px;
+    margin-top: -15px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.margin-left-210px {
+    margin-left: 175px;
+}
+
+.margin-left-20px {
+    margin-left: 20px;
+}
+
+.link-menu {
+    margin-left: 50px;
+    margin-top: -30px;
+    position: absolute;
+    text-decoration: none !important;
+}
+
+.margin-left-210px {
+    margin-left: 10px;
+}
+
+.title-list-provider {
+    margin-left: 285px !important;
+}
+
+.divprovider img {
+    width: 75px;
+    margin-top: -15px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.div-X {
+  width: 9%;
+  height: 75px;
+  margin-left: 765px;
+  margin-top: -75px;
+  text-align: center;
+  box-shadow: 0 0 24px 0 rgb(0 0 0 / 12%);
+  padding: 25px;
+  font-size: 25px;
+}
+
+.div-X i {
+  color: red;
+}
+
+.div-check {
+  width: 9%;
+  height: 75px;
+  border-top-right-radius: 10px;
+  margin-left: 865px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 0 24px 0 rgb(0 0 0 / 12%);
+  margin-top: -75px;
+  text-align: center;
+  padding: 25px;
+  font-size: 25px;
+}
+
+.div-check i {
+  color: green;
+}
+
+.link-menu {
+  margin-left: 50px;
+  margin-top: -30px;
+  position: absolute;
+  text-decoration: none !important;
+}
+
+.select-provider {
+    height: 2.575rem;
+    width: 460px;
+    padding: 0.5rem 0.81rem;
+    font-size: 0.875rem;
+    border: 1px solid #CED4DA;
+    background: transparent;
+    border-radius: 0.2rem;
+}
+
+.option {
+    height: 2.575rem;
+    width: 460px;
+    color: gray;
+    padding: 1.5rem 0.81rem;
+    font-size: 0.975rem;
+    border: 1px solid #CED4DA;
+    background: transparent;
+    border-radius: 0.2rem;
+}
+
+.link-menu {
+  margin-left: 50px;
+  margin-top: -30px;
+  position: absolute;
+  text-decoration: none !important;
+}
+
+.title-new-product {
+    margin-left: 400px !important;
+}
+
+.navbar .navbar-menu-wrapper .navbar-nav .nav-item.dropdown .navbar-dropdown {
+    position: absolute;
+    font-size: 0.9rem;
+    margin-top: 0;
+    right: 0;
+    left: auto;
+    top: 70px;
+    height: 100px;
+}
