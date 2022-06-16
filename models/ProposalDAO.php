@@ -41,6 +41,18 @@
 
         }
 
+        public function dropProposal(int $id){
+
+            $stmt = Banco::getInstance()->query("
+                DELETE FROM proposal
+                WHERE id=\"$id\"", PDO::FETCH_OBJ
+            );
+            
+            $stmt->execute();
+
+            return $stmt->fetchAll();    
+        }
+
     }
 
 ?>

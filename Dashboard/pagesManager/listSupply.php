@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="../vendors/feather/feather.css">
   <link rel="stylesheet" href="../vendors/ti-icons/css/themify-icons.css">
   <link rel="stylesheet" href="../vendors/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <!-- endinject -->
   <!-- Plugin css for this page -->
   <link rel="stylesheet" href="../vendors/datatables.net-bs4/dataTables.bootstrap4.css">
@@ -51,7 +52,39 @@
         margin-top: -15px;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
-    }  
+    }
+    
+    .div-X {
+      width: 9%;
+      height: 75px;
+      margin-left: 765px;
+      margin-top: -75px;
+      text-align: center;
+      box-shadow: 0 0 24px 0 rgb(0 0 0 / 12%);
+      padding: 25px;
+      font-size: 25px;
+    }
+
+    .div-X i {
+      color: red;
+    }
+
+    .div-check {
+      width: 9%;
+      height: 75px;
+      border-top-right-radius: 10px;
+      margin-left: 865px;
+      border-bottom-right-radius: 10px;
+      box-shadow: 0 0 24px 0 rgb(0 0 0 / 12%);
+      margin-top: -75px;
+      text-align: center;
+      padding: 25px;
+      font-size: 25px;
+    }
+
+    .div-check i {
+      color: green;
+    }
 
   </style>    
 
@@ -453,11 +486,17 @@
               <?php 
                 foreach($supplys as $supply) {
               ?>
-              <div class="col-6" style="height: 90px;">
+              <div class="col-12" style="height: 90px;">
                <div class="divprovider">
                  <img src="https://media.istockphoto.com/vectors/young-woman-jane-thinking-and-dreaming-mind-behavior-mental-mindset-vector-id1363343994?k=20&m=1363343994&s=612x612&w=0&h=JI9aYambhf26AbnzOL7Z-h5IXpK1syWuejoF1YvceNg=">
                  <b class="card-text margin-left-210px" style="color: #282680;">Quantidade: </b><?php echo $supply->amount . " unidades."; ?>
                  <b class="card-text margin-left-20px" style="color: #282680;">Valor R$: </b><?php echo $supply->value; ?>
+                 <div class="div-X">
+                  <a href="../../views/dropSuppy.php?idSupply=<?php echo $supply->id; ?>"><i class="fa-solid fa-x"></i></a>
+                 </div>
+                 <div class="div-check">
+                  <a href="../../Dashboard/pagesManager/listSupply.php"><i class="fa-solid fa-check"></i></a>
+                 </div>
                </div>
               </div>
               <?php

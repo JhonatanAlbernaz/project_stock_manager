@@ -1,6 +1,8 @@
 <?php
 
   session_start();
+  require_once __DIR__."../../models/ProductDAO.php";
+  $products = ProductDAO::getInstance()->findProducts();
 
 ?>
 
@@ -37,6 +39,11 @@
       margin-top: -30px;
       position: absolute;
       text-decoration: none !important;
+    }
+
+    .card-people img {
+      border-radius: 20px;
+      width: 80% !important;
     }
   </style>
 
@@ -128,7 +135,7 @@
               </a>
               <a class="dropdown-item">
                 <i class="ti-power-off text-primary"></i>
-                <a class="text-dark link-menu" href="#">Sair</a>
+                <a class="text-dark link-menu" href="Logout/logout.php">Sair</a>
               </a>
             </div>
           </li>
@@ -454,7 +461,7 @@
             <div class="col-md-6 grid-margin stretch-card">
               <div class="card tale-bg">
                 <div class="card-people mt-auto" style="padding-top: 0px !important;">
-                  <img src="https://media.istockphoto.com/photos/sculpture-thinker-with-golden-vr-glasses-over-pink-background-picture-id1175935913?k=20&m=1175935913&s=612x612&w=0&h=jWq0RyJMsGZqBfIgj_FjTrybVILrEYM8SIgcokmmlys=" alt="people">
+                  <img src="https://bootstrapmade.com/demo/templates/FlexStart/assets/img/hero-img.png" alt="people">
                   <div class="weather-info">
                     <div class="d-flex">
                       <div>
@@ -742,56 +749,32 @@
                   <div class="table-responsive">
                     <table class="table table-striped table-borderless">
                       <thead>
+
                         <tr>
-                          <th>Produtis</th>
-                          <th>Priço</th>
-                          <th>Encontro</th>
+                          <th>Produtos</th>
+                          <th>Preço</th>
+                          <th>Em Estoque</th>
                           <th>Status</th>
                         </tr>  
+
                       </thead>
                       <tbody>
-                        <tr>
-                          <td>Marketing de Busca</td>
-                          <td class="font-weight-bold">$362</td>
-                          <td>21 de setembro de 2018</td>
-                          <td class="font-weight-medium"><div class="badge badge-success">Concluído</div></td>
-                        </tr>
-                        <tr>
-                          <td>Motor de Otimização de Busca</td>
-                          <td class="font-weight-bold">$116</td>
-                          <td>13 de junho de 2018</td>
-                          <td class="font-weight-medium"><div class="badge badge-success">Concluído</div></td>
-                        </tr>
-                        <tr>
-                          <td>Exibição de Publicidade</td>
-                          <td class="font-weight-bold">$551</td>
-                          <td>28 de setembro de 2018</td>
-                          <td class="font-weight-medium"><div class="badge badge-warning">Pendente</div></td>
-                        </tr>
-                        <tr>
-                          <td>Publicidade Paga Por Clique</td>
-                          <td class="font-weight-bold">$523</td>
-                          <td>30 de junho de 2018</td>
-                          <td class="font-weight-medium"><div class="badge badge-warning">Pendente</div></td>
-                        </tr>
-                        <tr>
-                          <td>Marketing de Email</td>
-                          <td class="font-weight-bold">$781</td>
-                          <td>01 de novembro de 2018</td>
-                          <td class="font-weight-medium"><div class="badge badge-danger">Cancelado</div></td>
-                        </tr>
-                        <tr>
-                          <td>Marketing de Referência</td>
-                          <td class="font-weight-bold">$283</td>
-                          <td>20 de março de 2018</td>
-                          <td class="font-weight-medium"><div class="badge badge-warning">Pendente</div></td>
-                        </tr>
-                        <tr>
-                          <td>Marketing de Mídia Social</td>
-                          <td class="font-weight-bold">$897</td>
-                          <td>26 de outubro de 2018</td>
-                          <td class="font-weight-medium"><div class="badge badge-success">Concluído</div></td>
-                        </tr>
+
+                      <?php 
+                        foreach($products as $product) {
+                      ?>
+
+                      <tr style="background-color: white !important;">
+                        <td><?php echo $product->name; ?></td>
+                        <td class="font-weight-bold">$<?php echo $product->value; ?></td>
+                        <td><?php echo $product->inventory; ?></td>
+                        <td class="font-weight-medium"><div class="badge badge-success">Concluído</div></td>
+                      </tr>
+
+                      <?php
+                        }
+                      ?>
+
                       </tbody>
                     </table>
                   </div>

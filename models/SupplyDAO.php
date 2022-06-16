@@ -41,6 +41,18 @@
 
         }
 
+        public function dropSupply(int $id){
+
+            $stmt = Banco::getInstance()->query("
+                DELETE FROM supply
+                WHERE id=\"$id\"", PDO::FETCH_OBJ
+            );
+            
+            $stmt->execute();
+
+            return $stmt->fetchAll();    
+        }
+
     }
 
 ?>
