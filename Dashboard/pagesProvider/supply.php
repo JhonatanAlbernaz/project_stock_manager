@@ -29,44 +29,12 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="../css/vertical-layout-light/style.css">
   <link rel="stylesheet" href="../../assets/css/app.css">
-  <link rel="stylesheet" href="../css/app.css">
+  <link rel="stylesheet" href="../css/style.css">
   <!-- endinject -->
   <link href="../images/favicon.ico" rel="icon">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
-
-  <style>
-
-    .select-provider {
-        height: 2.575rem;
-        width: 460px;
-        padding: 0.5rem 0.81rem;
-        font-size: 0.875rem;
-        border: 1px solid #CED4DA;
-        background: transparent;
-        border-radius: 0.2rem;
-    }
-
-    .option {
-        height: 2.575rem;
-        width: 460px;
-        color: gray;
-        padding: 1.5rem 0.81rem;
-        font-size: 0.975rem;
-        border: 1px solid #CED4DA;
-        background: transparent;
-        border-radius: 0.2rem;
-    }
-
-    .link-menu {
-      margin-left: 50px;
-      margin-top: -30px;
-      position: absolute;
-      text-decoration: none !important;
-    }
-
-  </style>
 
 </head>
 <body>
