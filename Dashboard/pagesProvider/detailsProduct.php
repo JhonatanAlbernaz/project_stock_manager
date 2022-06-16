@@ -1,10 +1,10 @@
 <?php
 
   session_start();
-  require_once ("../../models/ProposalDAO.php");
-  require_once ("../../models/ProductDAO.php");
-  $proposals =  ProposalDAO::getInstance()->findProposal();
-  $products = ProductDAO::getInstance()->findProducts();
+  ini_set('display_errors', 1);
+  error_reporting(E_ALL);
+  require_once __DIR__."../../../models/ProductDAO.php";
+  $product = ProductDAO::getInstance()->find($_GET['id']);
 
 ?>
 
@@ -35,31 +35,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
-
-  <style>
-
-    .select-provider {
-        height: 2.575rem;
-        width: 460px;
-        padding: 0.5rem 0.81rem;
-        font-size: 0.875rem;
-        border: 1px solid #CED4DA;
-        background: transparent;
-        border-radius: 0.2rem;
-    }
-
-    .option {
-        height: 2.575rem;
-        width: 460px;
-        color: gray;
-        padding: 1.5rem 0.81rem;
-        font-size: 0.975rem;
-        border: 1px solid #CED4DA;
-        background: transparent;
-        border-radius: 0.2rem;
-    }
-
-  </style>
 
 </head>
 <body>
@@ -340,7 +315,7 @@
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="../provider.php">
+            <a class="nav-link" href="../">
               <i class="icon-grid menu-icon"></i>
               <span class="menu-title">Painel</span>
             </a>
@@ -449,56 +424,34 @@
 
          <div class="col-lg-12 mt-5 mt-lg-0 d-flex align-items-stretch">
 
-            <div class="row">
-             <form action="../../controllers/saveSupply.php" method="POST" class="form-widht-100px row g-2" enctype="multipart/form-data">
+            <div class="row" style="width: 103%;">
+             <div action="../../controllers/saveProduct.php" method="POST" class="form-widht-100px row g-2" enctype="multipart/form-data">
 
               <div class="section-title justify-content-center">
-                <h2 class="title-new-product">Fornecimento</h2>
+                <h2 class="title-list-product">Detalhe do Produto</h2>
               </div>
 
-              <div class="form-group input-group-sm font-size-register col-md-6">
-               <label for="id_product" class="form-label">Produto</label><br>
-               <select class="select-provider" name="id_product" id="id_product">
-                <option></option>   
-                <?php 
-                 foreach($products as $product) {
-                ?>
-                  <option value="<?php echo $product->id; ?>" styles="font-size:13px" class="option"><?php echo $product->name; ?></option><br>
-                <?php
-                  }
-                ?>
-               </select>
+              <div class="container mt-5">
+               <div class="row">
+                <div class="col-5">
+                 <img src="<?php echo $product->image; ?>" style="width: 100%;"> 
+                </div>
+                <div class="col-7">
+                 <h2 class="pt-3"><b style="color: #282680;"><?php echo $product->name; ?></b></h2><br>
+                 <h4 class="pt-3"><?php echo "<b>R$: </b>" . $product->value; ?></h4>
+                 <h4 class="pt-3"><?php echo "<b>Preciso de: </b>" . $product->inventory . " unidades."; ?></h4>
+               </div>
+               <div class="row mt-5">
+                <div class="col-12">
+                 <p>
+                 <?php echo $product->description; ?>
+                 </p>   
+                </div>   
+               </div>
               </div>
+             </div>
  
-              <div class="form-group input-group-sm font-size-register col-md-6">
-               <label for="id_proposal" class="form-label">Proposta</label><br>
-               <select class="select-provider" name="id_proposal" id="id_proposal">
-                <option></option>   
-                <?php 
-                 foreach($proposals as $proposal) {
-                ?>
-                  <option value="<?php echo $proposal->id; ?>" styles="font-size:13px" class="option"><?php echo "Qtd: " . $proposal->amount . " - R$: " . $proposal->value; ?></option><br>
-                <?php
-                  }
-                ?>
-               </select>
-              </div>
- 
-              <div class="form-group input-group-sm font-size-register col-md-6">
-               <label for="number" class="form-label">Quantidade</label>
-               <input type="number" class="form-control padding-form form-control-md text-dark" id="amount" name="amount" required></input>
-              </div>
- 
-              <div class="form-group input-group-sm font-size-register col-md-6">
-               <label for="value" class="form-label">Valor</label>
-               <input type="text" class="form-control padding-form form-control-md text-dark" id="value" name="value" required>
-              </div>
- 
-              <div class="input-group-sm mt-4 d-flex justify-content-center">
-               <input type="submit" class="btn btn-primary btn-block mb-3 font-size-register" value="CRIAR FORNECIMENTO" style="border-radius: 15px; margin-left: 385px !important;">
-              </div>
- 
-             </form> 
+             </div> 
             </div>
           </div>
         <!-- content-wrapper ends -->

@@ -323,7 +323,7 @@
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="icon-layout menu-icon"></i>
-              <span class="menu-title">Produtos</span>
+              <span class="menu-title">Fornecedor</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic">
@@ -436,7 +436,7 @@
               ?>
               <div class="col-4" style="height: 390px;">
                <div class="card ml-4" style="width: 14rem; height: 264px; ">
-                <a href="../pages/listProductProvider.php">
+                <a href="../pagesProvider/detailsProduct.php?id=<?php echo $product->id; ?>">
                  <img style="max-width: 100%" src="<?php echo $product->image; ?>" alt="...">
                 </a>
                 <div class="card-body">
