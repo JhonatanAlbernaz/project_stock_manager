@@ -1,2 +1,2 @@
-Projeto de Gestão de Estoque
-Projeto individual da turma 1 utilizando os conhecimentos adquiridos ao decorrer do curso.
+## Descrição do Projeto
+<p align="center">Escrever uma breve descrição</p>
