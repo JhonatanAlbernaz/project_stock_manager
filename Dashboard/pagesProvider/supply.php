@@ -59,6 +59,13 @@
         border-radius: 0.2rem;
     }
 
+    .link-menu {
+      margin-left: 50px;
+      margin-top: -30px;
+      position: absolute;
+      text-decoration: none !important;
+    }
+
   </style>
 
 </head>
@@ -149,7 +156,7 @@
               </a>
               <a class="dropdown-item">
                 <i class="ti-power-off text-primary"></i>
-                <p class="text-dark">Sair</p>
+                <a href="../Logout/logout.php" class="text-dark link-menu">Sair</a>
               </a>
             </div>
           </li>
