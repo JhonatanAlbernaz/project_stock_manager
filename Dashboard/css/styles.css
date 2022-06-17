@@ -216,3 +216,26 @@
     top: 70px;
     height: 100px;
 }
+
+.navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-search .input-group, .navbar .navbar-menu-wrapper .navbar-nav .nav-item.nav-search .asColorPicker-wrap {
+    border-radius: 4px;
+    padding: 0.75rem;
+    width: 455px !important;
+}
+
+.botao-filtrar {
+    margin-left: 25px;
+    padding: 10px;
+    background: #4B49AC;
+    border: 2px;
+    transition: all 0.6s ease 0s;
+}
+
+.botao-filtrar:hover {
+    background: #7DA0FA;
+    transition: all 0.6s ease 0s;
+}
+
+.navbar-search-input {
+    width: 300px !important;
+}
