@@ -30,7 +30,7 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="../css/vertical-layout-light/style.css">
   <link rel="stylesheet" href="../../assets/css/app.css">
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/styles.css">
   <!-- endinject -->
   <link href="../images/favicon.ico" rel="icon">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -58,7 +58,10 @@
                   <i class="icon-search"></i>
                 </span>
               </div>
-              <input type="text" class="form-control" id="navbar-search-input" placeholder="Procure agora" aria-label="search" aria-describedby="search">
+              <form class="form-inline" action="listProduct.php">
+                <input type="text" class="navbar-search-input form-control" id="navbar-search-input" placeholder="Procure agora o seu Produto" name="productName" aria-label="search" aria-describedby="search">
+                <button class="btn btn-danger botao-filtrar" type="submit">Procurar</button>
+              </form>
             </div>
           </li>
         </ul>

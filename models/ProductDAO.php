@@ -53,6 +53,23 @@
             return $stmt->fetch();    
         }
 
+        public function findCoursesWithFilters(string $productName = "", int $limit = 8) {
+            $whereFiltroCourse = "";
+            
+            if($productName != ""){
+                $whereFiltroCourse .= " AND (product.name like '%$productName%' or product.id like '%$productName%')";
+            }
+
+            $SQL =  "SELECT * FROM product
+            WHERE true 
+            {$whereFiltroCourse}
+            LIMIT {$limit}" ;
+
+            $stm = Banco::getInstance()->query($SQL);
+            
+            return $stm->fetchAll(PDO::FETCH_OBJ);
+        }
+
     }
 
 ?>
