@@ -29,7 +29,7 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="../css/vertical-layout-light/style.css">
   <link rel="stylesheet" href="../../assets/css/app.css">
-  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/style.css">
   <!-- endinject -->
   <link href="../images/favicon.ico" rel="icon">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -441,7 +441,7 @@
                <div class="divprovider">
                  <img src="https://media.istockphoto.com/vectors/young-smiling-man-avatar-3d-vector-people-character-illustration-vector-id1371797889?k=20&m=1371797889&s=612x612&w=0&h=6ELvwvesVcJBhVL8VH3bJdGqLFjDY7FxEk5Hrqo6deQ=">
                  <span><?php echo $provider->name; ?></span>
-                 <b class="card-text margin-left-210px" style="color: #282680;">Email: </b><?php echo $provider->email; ?>
+                 <b class="card-text" style="color: #282680; margin-left: 175px;">Email: </b><?php echo $provider->email; ?>
                  <b class="card-text margin-left-20px" style="color: #282680;">CNPJ: </b><?php echo $provider->numberRecord; ?>
                </div>
               </div>
